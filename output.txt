@@ -1,0 +1,53 @@
+
+1 Kiprotich Duncan Nairobi School 24 1
+2 Paul Mwangi Maina Nakuru High School 20 2
+3 Rotich Tony Light Academy Nairobi 19 3
+4 Mwangi Gavin Nairobi School 18 4
+5 Dalton Gabriel Alliance High School 16 5
+6 Muriu Alfred Nairobi School 15 6
+7 Abuga Evans Nairobi School 14 7
+8 lyke Kisala Upper Hill School 14 7
+9 Masayi Naomi Nastic Alliance Girls High School 13 9
+10 Mukoya Khisa Alliance High 13 9
+1 Oduor Erika Kianda School 13 9
+12 Kefa James Nairobi School 12 12
+13 Ivy Cherono Kipsigis Girls High School 1 13
+14 Precious Kemboi Kipsigis Girls High School 10 16
+15 Kiplangat Ryan Nairobi School 11 13
+16 Mark Gisege Jotham Nairobi School 11 13
+7 Bill Kimutai Alliance High School 10 16
+18 Jacque Kyalo Kipsigis Girls High School 10 16
+19 Munene Gerald Light Academy Nairobi 9 19
+20 Nimrod Aberi Nyaberi Alliance High School 9 19
+21 Omondi Timothy Odhiambo Light Academy Nairobi 9 19
+22 Nadi Nuhayd - Nairobi School 9 19
+23 Kimutai Evans Nairobi School 9 19
+24 Tinega Kevin Nairobi School 9 19
+25 Okore Rakira Thika Road Christian High School 9 19
+26 Eunice Wanjiku Kariuki Thika Road Christian High School 9 19
+27 Caleb Kosgei Alliance High School 8 27
+28 Kipngeno Griffin Kabianga School 8 27
+29 Mulinge Alfred Nairobi School 8 27
+30 Muyeku Matilu Alliance High School 7 30
+31 Orora William Stanley D Kabianga School 7 30
+32 Gideon Musyoki Mutuke Moi High School Kabarak 7 30
+33 Kiplangat Kevin Nairobi School 6 33
+34 Peter Mumo Clay International School 4 34
+35 Teresia Nduku Clay International School 4 34
+36 Ocharo Momanyi Fredrick Kabianga School 4 34
+37 Kevin Gift Nairobi School 4 34
+38 Muriuki Precious Kianda School 3 38
+39 Marquel Lindsay Marie State House Girls High School 2 39
+40 Bilal Abdulahi Mohamed Alliance High School
+
+41 Vic Koech Alliance High School
+
+42 Levi Njoroge Jr. Kericho Day Secondary School
+
+43 Onyango Nelson Maranda High School
+
+44 Ryan Maghanga Mshiba M Moi High School Kabarak
+
+45 Nicole Gakii Muriuki Moi High School Kabarak
+
+46 Javier Kiprotich Kapsoenin Moi High School Kabarak
