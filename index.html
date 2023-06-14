@@ -1,222 +1,233 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head><meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" /><link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" /><link href="App_Themes/design.css" rel="stylesheet" type="text/css" /><link href="App_Themes/index.css" rel="stylesheet" type="text/css" /><link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" /><title>
-        Global Talent Network
-</title>
-<style>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
+    <title>Global Talent Network</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #1b1d1e;
+            margin: 0;
+            margin: 40px;
+            padding: 0;
+            overflow: auto;
+        }
 
-   
-       body {
-        font-family: 'Comfortaa', cursive;
-         background-color: #1b1d1e;
-         margin: 0;
-         margin: 40 px;
-         padding: 0;
-         overflow: auto;
-       }
-   
-       .container {
-         display: flex;
-         flex-direction: column;
-         min-height: 100vh;
-       }
-   
-       .content {
-         flex: 1;
-         padding: 2rem;
-         margin-left: 20%;
-       }
-   
-       .centered-heading {
-        font-family: 'Comfortaa', cursive;
-         margin: 0;
-         padding: 0;
-         overflow: auto;
-         text-align: center;
-         font-weight: 700;
-         font-size: 50px;
-     
-       }
-   
-       .centered-image {
-         display: flex;
-         justify-content: center;
-         margin-top: 1rem;
-       }
-   
-       #header {
-         background-color: #1b1d1e;
-         padding: 2rem;
-         color: #ffffff;
-       }
-   
-       .top-left-corner {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 1;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-   
-       #menu {
-        font-family: 'Comfortaa', cursive;
-         display: flex;
-         justify-content: center;
-         margin-top: 1rem;
-         color: #ffffff;
-         font-size: 1.2rem;
-         font-weight: 700;
-       }
-   
-       #menu a {
-         margin: 0 1rem;
-         text-decoration: none;
-         color: #ffffff;
-         transition: color 0.3s ease-in-out;
-       }
-   
-       #menu a:hover {
-         color: #dee0e7;
-       }
-   
-       footer {
-  background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
-  background-size: contain;
-  background-repeat: repeat;
-  color: rgb(0, 0, 0);
-  text-align: left;
-  font-size: 12px;
-  line-height: 1em;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.2em 2em;
-  box-sizing: border-box;
-  margin: 0;
-  position: fixed; /* Change position to fixed */
-  z-index: 1;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+        .content {
+            flex: 1;
+            padding: 2rem;
+            margin-left: 20%;
+        }
 
+        .centered-heading {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            text-align: center;
+            font-weight: 700;
+            font-size: 50px;
+            color: white; /* Set the text color to white */
+        }
 
-  footer::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.2);
-      z-index: -1;
-  }
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
 
-  footer b {
-      font-size: 10px;
-      margin-top: auto;
-  }
+        #header {
+            background-color: #1b1d1e;
+            padding: 2rem;
+            color: #ffffff;
+        }
 
-  footer a {
-      color: rgb(0, 0, 0);
-      font-size: 10px;
-  }
+        .top-left-corner {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 1;
+        }
 
-     #main {
-         margin-left: 30px; /* Adjust this value to move the content further to the right */
-    }
+        #menu {
+            font-family: 'Comfortaa', cursive;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
 
-   
-       header,
-       h1 {
-        font-family: 'Merriweather', serif;
-         font-size: 30px;
-         font-weight: 700;
-         color: #ffffff;
-         margin-bottom: 2rem;
-       }
-       header,
-       h2 {
-        font-family: 'Merriweather', serif;
-         color: #ffffff;
-       }
-       #h1 a{
-         text-decoration: none;
-         color: #ffffff;
-         transition: color 0.3s ease-in-out;
-       }
-       #h1 a:hover {
-         color: #dee0e7;
-       }
-   
-       .intro {
-         text-align: left;
-         margin-left: 1000 px;
-         margin-right: 1000 px;
-       }
-   
-       /* Media Queries */
-       @media screen and (max-width: 768px) {
-         .centered-heading {
-           font-size: 1.8rem;
-         }
-   
-         header,
-         h1 {
-           font-size: 50px;
-         }
-       }
-       th,
+        #menu a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #menu a:hover {
+            color: #dee0e7;
+        }
+
+        footer {
+            background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+            background-size: contain;
+            background-repeat: repeat;
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-size: 12px;
+            line-height: 1em;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.2em 2em;
+            box-sizing: border-box;
+            margin: 0;
+            position: fixed; /* Change position to fixed */
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            z-index: -1;
+        }
+
+        footer b {
+            font-size: 10px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: rgb(0, 0, 0);
+            font-size: 10px;
+        }
+
+        #main {
+            margin-left: 30px; /* Adjust this value to move the content further to the right */
+        }
+
+        header,
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        header,
+        h2 {
+            font-family: 'Merriweather', serif;
+            color: #ffffff;
+        }
+
+        #h1 a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #h1 a:hover {
+            color: #dee0e7;
+        }
+
+        .intro {
+            text-align: left;
+            margin-left: 1000px;
+            margin-right: 1000px;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .centered-heading {
+                font-size: 1.8rem;
+            }
+
+            header,
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        th,
         td {
-      border: 2px solid #1b1d1e;
-    font-size: 14px;
-    margin: 30px;
-      padding: 4px;
-      color: #ffffff
-    }
-     </style>
+            border: 2px solid #1b1d1e;
+            font-size: 14px;
+            margin: 30px;
+            padding: 4px;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-<  <div id="header">
-    
-        <div id="h1">
-          <h1 class="centered-heading">
+<div id="header">
+    <div id="h1">
+        <h1 class="centered-heading">
             <a href="https://www.globtalent.org/">Global Talent Network</a>
-          </h1>
-        </div>
-        <div id="menu">
-            <a href="https://www.globtalent.org/">Home</a> &bull;
-          <a href="index.html">Partner Math Olympiads</a>
-        </div>
-      </div>
-<hr>
-    <div id="main">
-        
-<h2>2023</h2>
-
-<!--
-<p>See also
-<a id="ctl00_CPH_Main_HyperLinkCountryMap" href="countries_map.aspx">World map</a>.</p>
--->
-
-<table><thead><tr><th><a>Code</a></th><th class="highlightUp"><a>Country</a></th><th>National MO site</th></tr>
-</thead><tbody><tr class="imp"><td align="center"><a href="burundi.html">BDI</a></td><td><a href="burundi.html">Burundi</a></td></tr>
-<tr class="imp"><td align="center"><a href="ethiopia.html">ETH</a></td><td><a href="ethiopia.html">Ethiopia</a></td></tr>
-<tr class="imp"><td align="center"><a href="kenya.html">KEN</a></td><td><a href="kenya.html">Kenya</a></td><td><a href = "http://kkmo-official.com">http://kkmo-official.com</a></td></tr>
-</tbody></table>
-
-
+        </h1>
     </div>
-    <br>
+    <div id="menu">
+        <a href="https://www.globtalent.org/">Home</a> &bull;
+        <a href="index.html">Partner Math Olympiads</a>
+    </div>
+</div>
+<hr>
+<div id="main">
+    <h2 style="color: white;">2023</h2>
 
-  <footer>
+    <table>
+        <thead>
+        <tr>
+            <th><a style="color: white;">Code</a></th>
+            <th class="highlightUp"><a style="color: white;">Country</a></th>
+            <th>National MO site</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="imp">
+            <td align="center"><a href="burundi.html">BDI</a></td>
+            <td><a href="burundi.html">Burundi</a></td>
+        </tr>
+        <tr class="imp">
+            <td align="center"><a href="ethiopia.html">ETH</a></td>
+            <td><a href="ethiopia.html">Ethiopia</a></td>
+        </tr>
+        <tr class="imp">
+            <td align="center"><a href="kenya.html">KEN</a></td>
+            <td><a href="kenya.html">Kenya</a></td>
+            <td><a href="http://kkmo-official.com">http://kkmo-official.com</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<footer>
     <b>E-mail:</b>
     <a href="mailto:ea@globtalent.org">ea@globtalent.org</a>
-  </footer>
+</footer>
 </body>
 </html>
