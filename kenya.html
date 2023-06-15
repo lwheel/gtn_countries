@@ -236,35 +236,48 @@
     .dropdown-content a:hover {
       background-color: #f1f1f1;
     }
-    .card-body{
-        background-color: #1b1d1e;
-    }
     .card-header {
-        background-color: #424547;
-        color: white;
-        text-decoration: none;
-    }
-    .accordian {
-        border: 2px solid #1b1d1e;
-    }
+  background-color: #424547;
+  color: white;
+  text-decoration: none;
+  border: none; /* Remove the border */
+}
+
+.card-header button {
+  color: white;
+  text-decoration: none;
+}
+
+.card-body {
+  background-color: #1b1d1e;
+}
+
+.accordian {
+  border: none; /* Remove the border */
+}
   </style>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var accordion = document.getElementById("accordion");
+document.addEventListener("DOMContentLoaded", function() {
+    var accordion = document.getElementById("accordion");
+    var buttons = accordion.getElementsByClassName("btn");
+    var contents = accordion.getElementsByClassName("collapse");
 
-        var buttons = accordion.getElementsByClassName("btn");
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none"; // Hide all the contents initially
+    }
 
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener("click", function() {
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        }
-    });
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+});
+
 </script>
 </head>
 <body>
@@ -1015,7 +1028,7 @@
         </div>
       </div>  
 
-
+<br>
     <h2 style="color: white;">Past Kenyan Problem Sets</h2>
     <table>
         <thead>
