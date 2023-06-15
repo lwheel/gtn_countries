@@ -265,17 +265,20 @@
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
         var content = this.nextElementSibling;
-        if (content.style.display === "none" || content.style.display === "") {
-            content.style.display = "block";
+        var isCollapsed = content.classList.contains("show");
+
+        if (isCollapsed) {
+            content.classList.remove("show");
         } else {
-            content.style.display = "none";
+            content.classList.add("show");
         }
         });
 
         // Close the content panels by default
-        contents[i].style.display = "none";
+        contents[i].classList.remove("show");
     }
     });
+
 
 
 </script>
