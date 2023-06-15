@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
+    <title>Global Talent Network</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
+
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #1b1d1e;
+            margin: 0;
+            margin: 40px;
+            padding: 0;
+            overflow: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            margin-left: 20%;
+        }
+
+        .centered-heading {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            text-align: center;
+            font-weight: 700;
+            font-size: 50px;
+            color: white; /* Set the text color to white */
+        }
+
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        #header {
+            background-color: #1b1d1e;
+            padding: 2rem;
+            color: #ffffff;
+        }
+
+        .top-left-corner {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 1;
+        }
+
+        #menu {
+            font-family: 'Comfortaa', cursive;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        #menu a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #menu a:hover {
+            color: #dee0e7;
+        }
+
+        footer {
+            background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+            background-size: contain;
+            background-repeat: repeat;
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-size: 14px;
+            line-height: 1em;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.2em 2em;
+            box-sizing: border-box;
+            margin: 0;
+            position: fixed; /* Change position to fixed */
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            z-index: -1;
+        }
+
+        footer b {
+            font-size: 12px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+        }
+
+        #main {
+            margin-left: 28px; /* Adjust this value to move the content further to the right */
+        }
+
+        header,
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        header,
+        h2 {
+            font-family: 'Merriweather', serif;
+            color: #ffffff;
+            font-size: 50px;
+        }
+
+        #h1 a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #h1 a:hover {
+            color: #dee0e7;
+        }
+
+        .intro {
+            text-align: left;
+            margin-left: 1000px;
+            margin-right: 1000px;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .centered-heading {
+                font-size: 1.8rem;
+            }
+
+            header,
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        th,
+        td {
+            border: 2px solid #1b1d1e;
+            font-size: 20px;
+            margin: 30px;
+            padding: 4px;
+            color: white;
+            margin-right: 40px; /* Added wider margin between columns */
+            padding-left: 20px; /* Added padding to create spacing */
+            padding-right: 20px; /* Added padding to create spacing */
+            transition: background-color 0.3s ease-in-out; /* Added transition effect */
+        }
+
+        th a {
+          font-size: 30px; /* Increased font size for column titles */
+        }
+
+        th a,
+        td a {
+            color: white; /* Set the text color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+
+        th a:hover,
+        td a:hover {
+            color: #dee0e7;
+        }
+
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black !important;
+      padding: 8px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .card-header {
+  background-color: #424547;
+  color: white;
+  text-decoration: none;
+  border: none; /* Remove the border */
+    outline: none;
+}
+.card {
+    border: none; /* Remove the border */
+    margin-bottom: 10px;
+  }
+.card-header button {
+  color: white;
+  text-decoration: none;
+}
+
+.card-body {
+  background-color: #1b1d1e;
+}
+
+.accordian {
+  border: none; /* Remove the border */
+}
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var accordion = document.getElementById("accordion");
+    var buttons = accordion.getElementsByClassName("btn");
+    var contents = accordion.getElementsByClassName("collapse");
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+        var content = this.nextElementSibling;
+        var isCollapsed = content.classList.contains("show");
+
+        if (isCollapsed) {
+            content.classList.remove("show");
+        } else {
+            content.classList.add("show");
+        }
+        });
+
+        // Close the content panels by default
+        contents[i].classList.remove("show");
+    }
+    });
+
+
+
+</script>
+</head>
+<body>
+  <div id="header">
+    <div id="h1">
+      <h1 class="centered-heading">
+        <a href="https://www.globtalent.org/">Global Talent Network</a>
+      </h1>
+    </div>
+    <div id="menu">
+      <a href="https://www.globtalent.org/">Home</a> &bull;
+      <div class="dropdown">
+        <a href="index.html">Partner Math Olympiads</a>
+        <div class="dropdown-content">
+          <a href="problems.html">Past Problems</a>
+          <a href="total_results.html">Results by Country</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<hr>
+<div id="main">
+    <h2 style="color: white; font-size: 40px;">Ireland</h2>
+    
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                2023 Results
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <table class="table">
+                    <thread>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Fionn Kimber O'Shea</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tianci Yan</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Emily Wolfe </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Seán Hallissey</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Yuan Li</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Owen Barron</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Ang Yang Li</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Xiang Lian</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Pau Nieto Bou </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Ayushi Mahajan</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Isaac Lee</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Xiwen Tan</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Robert Dunne</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Luca Zani</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td> Zongwen Wu</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>James Chen</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Noah Morgan-Doyle</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td> Guy Jenkinson</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td> Stephen Smith</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td> Bryan Chan</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Anna Giacobbe</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Yitian Chen</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Oscar O'Callaghan</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Jack McAuliffe</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Rian Malletta</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Qingyi Chen</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Dylan Minogue</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Victor Golub</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Sofia Babic</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td> Laura Cassidy</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td> Fintan Byrne</td>
+                    </tr>
+                </tbody>
+                </table>
+
+            </div>
+          </div>
+        </div>
+      </div>  
+
+<br>
+    <h2 style="color: white; font-size: 40px;">Past Ireland Problem Sets</h2>
+    <table>
+        <thead>
+          <tr>
+            <th class="highlightDown"><a>Year</a></th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="imp">
+            <td align="center"><a>1988-2014</a></td>
+
+            <td align="center"><a href="http://www.irmo.ie/irmo.pdf">PDF</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2009(with solutions)</a></td>
+            <td align="center"><a href="http://www.irmo.ie/IrMO2009paper1solutions.pdf">PDF</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2009(with solutions)</a></td>
+            <td align="center"><a href="http://www.irmo.ie/IrMO2009paper2solutions.pdf">PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+<br>
+<footer>
+    <b>E-mail:</b>
+    <a href="mailto:ea@globtalent.org">ea@globtalent.org</a>
+</footer>
+</body>
+</html>
