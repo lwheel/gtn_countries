@@ -237,24 +237,25 @@
       background-color: #f1f1f1;
     }
     .card-header {
-  background-color: #424547;
-  color: white;
-  text-decoration: none;
-  border: none; /* Remove the border */
-}
+        background-color: #424547;
+        color: white;
+        text-decoration: none;
+        border: none; /* Remove the border */
+    }
 
-.card-header button {
-  color: white;
-  text-decoration: none;
-}
+    .card-header:hover {
+        background-color: #424547;
+    }
 
-.card-body {
-  background-color: #1b1d1e;
-}
+    .card-body {
+        background-color: #1b1d1e;
+        color: white;
+        display: none;
+    }
 
-.accordian {
-  border: none; /* Remove the border */
-}
+    .card-body.show {
+        display: block;
+    }
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
