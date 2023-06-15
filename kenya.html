@@ -7,6 +7,10 @@
     <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
     <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
     <title>Global Talent Network</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
@@ -263,10 +267,20 @@
 <div id="main">
     <h2 style="color: white; font-size: 40px;">Kenya</h2>
     
-    <h2 style="color: white;">2022 Results</h2>
-    <button onclick="toggleResults('2022')">Toggle Results</button>
-    <table id="results-2022">
-    <table>
+    <div id="accordion">
+        <!-- 2022 Results -->
+        <div class="card">
+          <div class="card-header" id="heading2022">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2022" aria-expanded="true" aria-controls="collapse2022">
+                2022 Results
+              </button>
+            </h2>
+          </div>
+  
+          <div id="collapse2022" class="collapse show" aria-labelledby="heading2022" data-parent="#accordion">
+            <div class="card-body">
+    <table class="table">
         <tr>
             <th>Rank</th>
             <th>Name</th>
@@ -507,11 +521,12 @@
             
         </tr>
     </table>
-<br>
-    <h2 style="color: white;">2021 Results</h2>
-    <button onclick="toggleResults('2021')">Toggle Results</button>
-    <table id="results-2021">
-    <table>
+</div>
+</div>
+</div>
+    <div id="collapse2022" class="collapse show" aria-labelledby="heading2022" data-parent="#accordion">
+        <div class="card-body">
+          <table class="table">
         <tr>
             <th>Rank</th>
             <th>Name</th>
@@ -959,7 +974,12 @@
                 <td>7</td>
             </tr>
         </table>
-        
+    </div>
+</div>
+</div>
+</div>
+<!-- End Accordion -->
+</div>        
 
 
     <h2 style="color: white;">Past Kenyan Problem Sets</h2>
