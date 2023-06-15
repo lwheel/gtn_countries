@@ -233,6 +233,12 @@
       background-color: #f1f1f1;
     }
   </style>
+      <script>
+        function toggleResults(year) {
+            var results = document.getElementById("results-" + year);
+            results.style.display = results.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
   <div id="header">
@@ -258,6 +264,8 @@
     <h2 style="color: white; font-size: 40px;">Kenya</h2>
     
     <h2 style="color: white;">2022 Results</h2>
+    <button onclick="toggleResults('2022')">Toggle Results</button>
+    <table id="results-2022">
     <table>
         <tr>
             <th>Rank</th>
@@ -499,8 +507,10 @@
             
         </tr>
     </table>
-
-    <h2 style="color: white;">2022 Results</h2>
+<br>
+    <h2 style="color: white;">2021 Results</h2>
+    <button onclick="toggleResults('2021')">Toggle Results</button>
+    <table id="results-2021">
     <table>
         <tr>
             <th>Rank</th>
