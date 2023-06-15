@@ -257,26 +257,23 @@
 }
   </style>
   <script>
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
     var accordion = document.getElementById("accordion");
     var buttons = accordion.getElementsByClassName("btn");
     var contents = accordion.getElementsByClassName("collapse");
 
-    for (var i = 0; i < contents.length; i++) {
-        contents[i].style.display = "none"; // Hide all the contents initially
-    }
-
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
         });
     }
-});
+    });
+
 
 </script>
 </head>
