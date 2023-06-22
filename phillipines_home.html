@@ -325,7 +325,18 @@ footer::before {
       ['65+',    5866831]
     ]);
 
+    var data2 = google.visualization.arrayToDataTable([
+      ['Gender', 'Populations'],
+      ['Male',     55306793],
+      ['Female',      53726452]
+    ]);
+
     var options = {
+      title: 'Population by age',
+      backgroundColor: 'transparent'
+    };
+
+    var options2 = {
       title: 'Population by age',
       backgroundColor: 'transparent'
     };
@@ -333,6 +344,10 @@ footer::before {
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
     chart.draw(data, options);
+
+    var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+chart2.draw(data2, options2);
   }
 </script>
 </head>
@@ -366,6 +381,7 @@ footer::before {
 <hr>
 <div id="main">
   <div id="piechart"></div>
+  <div id="piechart2"></div>
 </div>
 <footer>
     <b>E-mail:</b>
