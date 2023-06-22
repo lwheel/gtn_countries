@@ -303,6 +303,29 @@ footer::before {
 #piechart2 g.google-visualization-tooltip text {
   fill: black !important;
 }
+/* Pie chart2 styles */
+#piechart3 {
+  width: 900px;
+  height: 500px;
+  background-color: transparent; /* Set the background color to transparent */
+  color: white; /* Set the text color to white */
+  font-family: 'Comfortaa', cursive;
+}
+#piechart3 svg {
+  background-color: transparent !important;
+}
+
+#piechart3 text {
+  fill: white !important;
+  font-family: 'Comfortaa', cursive;
+}
+
+#piechart3 g.google-visualization-tooltip {
+  color: black !important;
+}
+#piechart3 g.google-visualization-tooltip text {
+  fill: black !important;
+}
 hr {
   background-color: white;
 }
@@ -357,6 +380,12 @@ hr {
       ['Female',      53726452]
     ]);
 
+    var data3 = google.visualization.arrayToDataTable([
+      ['Gender', 'Populations'],
+      ['Male',     21540308],
+      ['Female',      20223215]
+    ]);
+
     var options = {
       title: 'Population by age',
       backgroundColor: 'transparent'
@@ -367,13 +396,22 @@ hr {
       backgroundColor: 'transparent'
     };
 
+    var options3 = {
+      title: 'Population(0-18) by gender',
+      backgroundColor: 'transparent'
+    };
+
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
     chart.draw(data, options);
 
     var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
 
-chart2.draw(data2, options2);
+  chart2.draw(data2, options2);
+
+  var chart3 = new google.visualization.PieChart(document.getElementById('piechart3'));
+
+chart3.draw(dat3, options3);
   }
 </script>
 </head>
@@ -409,6 +447,7 @@ chart2.draw(data2, options2);
 <div id="main">
   <div id="piechart"></div>
   <div id="piechart2"></div>
+  <div id="piechart3"></div>
 </div>
 <footer>
     <b>E-mail:</b>
