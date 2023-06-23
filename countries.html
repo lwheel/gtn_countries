@@ -273,7 +273,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .hovered {
+        #worldmap .area:hover {
             /* Change the background color to the desired color */
             background-color: #0081cd;
         }
@@ -301,22 +301,6 @@
             }
         });
     </script>
-    <script>
-            // Add an event listener to handle hover on the areas
-            document.addEventListener("DOMContentLoaded", function () {
-                var areas = document.getElementsByTagName("area");
-    
-                for (var i = 0; i < areas.length; i++) {
-                    areas[i].addEventListener("mouseover", function () {
-                        this.classList.add("hovered");
-                    });
-    
-                    areas[i].addEventListener("mouseout", function () {
-                        this.classList.remove("hovered");
-                    });
-                }
-            });
-        </script>
 </head>
 
 <body>
@@ -347,29 +331,18 @@
 
         <hr>
         <div id="main">
-            <img
-                src="https://lwheel.github.io/gtn_countries/map (2) copy.png"
-                alt="World Map"
-                usemap="#worldmap"
-                class="centered-image"
-            />
 
-            <map name="worldmap">
-
-                <area 
-                    shape="poly" 
-                    coords="496,154, 514,203, 533,154, 514,134" 
-                    href="india_home.html" 
-                    alt="India">
-                <area
-                    shape="rect"
-                    coords="590, 176, 601, 201"
-                    href="phillipines_home.html"
-                    alt=“Philippines”
-                />
-            </map>
-        </div>
-    </div>
+                <!-- Replace the regular image with an SVG image -->
+                <svg id="worldmap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 536">
+                    <image xlink:href="https://lwheel.github.io/gtn_countries/map (2) copy.png" width="800" height="536" />
+                    <!-- Define the areas as SVG polygons -->
+                    <a href="india_home.html">
+                        <polygon class="area" points="496,154 514,203 533,154 514,134" />
+                    </a>
+                    <a href="phillipines_home.html">
+                        <rect class="area" x="590" y="176" width="11" height="25" />
+                    </a>
+                </svg>
 
     <footer>
         <b>Footer Text</b>
