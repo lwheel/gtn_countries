@@ -273,7 +273,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        area:hover {
+        .hovered {
             /* Change the background color to the desired color */
             background-color: #0081cd;
         }
@@ -301,6 +301,22 @@
             }
         });
     </script>
+    <script>
+            // Add an event listener to handle hover on the areas
+            document.addEventListener("DOMContentLoaded", function () {
+                var areas = document.getElementsByTagName("area");
+    
+                for (var i = 0; i < areas.length; i++) {
+                    areas[i].addEventListener("mouseover", function () {
+                        this.classList.add("hovered");
+                    });
+    
+                    areas[i].addEventListener("mouseout", function () {
+                        this.classList.remove("hovered");
+                    });
+                }
+            });
+        </script>
 </head>
 
 <body>
