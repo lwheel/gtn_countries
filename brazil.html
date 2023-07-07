@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
+    <title>Global Talent Network</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
+
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #1b1d1e;
+            margin: 0;
+            margin: 40px;
+            padding: 0;
+            overflow: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            margin-left: 20%;
+        }
+
+        .centered-heading {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            text-align: center;
+            font-weight: 700;
+            font-size: 50px;
+            color: white; /* Set the text color to white */
+        }
+
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        #header {
+            background-color: #1b1d1e;
+            padding: 2rem;
+            color: #ffffff;
+        }
+
+        .top-left-corner {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 1;
+        }
+
+        #menu {
+            font-family: 'Comfortaa', cursive;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        #menu a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #menu a:hover {
+            color: #dee0e7;
+        }
+
+   footer {
+ position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.2em 2em;
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+  background-size: contain;
+  background-repeat: repeat;
+  line-height: 1.2;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 120%; /* Adjust the height to leave space for the text */
+  background-color: rgba(255, 255, 255, 0.4); /* Change the opacity to your liking */
+  z-index: -1;
+}
+
+   footer b {
+      font-size: 10px;
+      font-weight: 600;
+      margin-top: auto;
+  }
+
+  footer a {
+      color: rgb(0, 0, 0);
+      font-size: 10px;
+      font-weight: 600;
+  }
+
+        #main {
+            margin-left: 28px; /* Adjust this value to move the content further to the right */
+        }
+
+        header,
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        header,
+        h2 {
+            font-family: 'Merriweather', serif;
+            color: #ffffff;
+            font-size: 50px;
+        }
+
+        #h1 a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #h1 a:hover {
+            color: #dee0e7;
+        }
+
+        .intro {
+            text-align: left;
+            margin-left: 1000px;
+            margin-right: 1000px;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .centered-heading {
+                font-size: 1.8rem;
+            }
+
+            header,
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        th,
+        td {
+            border: 2px solid #1b1d1e;
+            font-size: 20px;
+            margin: 30px;
+            padding: 4px;
+            color: white;
+            margin-right: 40px; /* Added wider margin between columns */
+            padding-left: 20px; /* Added padding to create spacing */
+            padding-right: 20px; /* Added padding to create spacing */
+            transition: background-color 0.3s ease-in-out; /* Added transition effect */
+        }
+
+        th a {
+          font-size: 30px; /* Increased font size for column titles */
+        }
+
+        th a,
+        td a {
+            color: white; /* Set the text color to white */
+            text-decoration: none; /* Remove underline */
+        }
+
+
+        th a:hover,
+        td a:hover {
+            color: #dee0e7;
+        }
+
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black !important;
+      padding: 8px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .card-header {
+  background-color: #424547;
+  color: white;
+  text-decoration: none;
+  border: none; /* Remove the border */
+    outline: none;
+}
+.card {
+    border: none; /* Remove the border */
+    margin-bottom: 10px;
+  }
+.card-header button {
+  color: white;
+  text-decoration: none;
+}
+
+.card-body {
+  background-color: #1b1d1e;
+}
+
+.accordian {
+  border: none; /* Remove the border */
+}
+hr {
+  background-color: white;
+}
+  p {
+    color: white;
+}
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var accordion = document.getElementById("accordion");
+    var buttons = accordion.getElementsByClassName("btn");
+    var contents = accordion.getElementsByClassName("collapse");
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+        var content = this.nextElementSibling;
+        var isCollapsed = content.classList.contains("show");
+
+        if (isCollapsed) {
+            content.classList.remove("show");
+        } else {
+            content.classList.add("show");
+        }
+        });
+
+        // Close the content panels by default
+        contents[i].classList.remove("show");
+    }
+    });
+
+
+
+</script>
+</head>
+<body>
+  <div id="header">
+    <div id="h1">
+      <h1 class="centered-heading">
+        <a href="https://www.globtalent.org/">Global Talent Network</a>
+      </h1>
+    </div>
+    <div id="menu">
+      <a href="https://www.globtalent.org/">Home</a> &bull;
+      <div class="dropdown">
+        <a href="index.html">Partner Math Olympiads</a>
+        <div class="dropdown-content">
+          <a href="problems.html">Past Problems</a>
+          <a href="total_results.html">Results by Country</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="countries.html">Countries</a>
+        <div class="dropdown-content">
+          <a href="phillipines_home.html">Phillipines</a>
+          <a href="india_home.html">India</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<hr>
+<div id="main">
+    <h2 style="color: white; font-size: 50px;">Brazil</h2>
+    
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                2021 Results
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                        <td style="width: 446px;"><strong>Name</strong></td>
+                        <td style="width: 68px;"><strong>Points</strong></td>
+                        <td style="width: 173px;"><strong>Prize</strong></td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Eduardo Henrique Rodrigues do Nascimento</td>
+                        <td style="width: 68px;">210</td>
+                        <td style="width: 173px;">Gold</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Olavo Paschoal Longo</td>
+                        <td style="width: 68px;">200</td>
+                        <td style="width: 173px;">Gold</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Gabriel Cruz Vitale Torkomian</td>
+                        <td style="width: 68px;">185</td>
+                        <td style="width: 173px;">Gold</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Gustavo Neves da Cruz</td>
+                        <td style="width: 68px;">185</td>
+                        <td style="width: 173px;">Gold</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Rodrigo Salgado Domingos Porto</td>
+                        <td style="width: 68px;">180</td>
+                        <td style="width: 173px;">Gold</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Sebastião Fróes Nachtergaele Gomes Navarro</td>
+                        <td style="width: 68px;">175</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Marcelo Machado Lage</td>
+                        <td style="width: 68px;">175</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Caio Hermano Maia de Oliveira</td>
+                        <td style="width: 68px;">175</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Felipe Makoto Shimamura Silva</td>
+                        <td style="width: 68px;">170</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Vitor de Oliveira da Silva</td>
+                        <td style="width: 68px;">165</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Yvens Ian Prado Porto</td>
+                        <td style="width: 68px;">160</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Pedro D'Andrea Rosalba</td>
+                        <td style="width: 68px;">150</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Miguel de Carvalho Oliveira</td>
+                        <td style="width: 68px;">150</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Luís Felipe Pestana Giglio</td>
+                        <td style="width: 68px;">145</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">João Pedro Ramos Viana Costa</td>
+                        <td style="width: 68px;">140</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Bruno Fernandes Iorio</td>
+                        <td style="width: 68px;">140</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Rafael Martins Ruas</td>
+                        <td style="width: 68px;">135</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Henrique Quirino de Oliveira</td>
+                        <td style="width: 68px;">135</td>
+                        <td style="width: 173px;">Silver</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Pedro Porto de Carvalho Nunes</td>
+                        <td style="width: 68px;">130</td>
+                        <td style="width: 173px;">Bronze</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Pedro de Oliveira Lengruber Lack</td>
+                        <td style="width: 68px;">130</td>
+                        <td style="width: 173px;">Bronze</td>
+                        </tr>
+                        <tr>
+                        <td style="width: 446px;">Arthur Henrique Paixão Santos</td>
+                        <td style="width: 68px;">125</td>
+                        <td style="width: 173px;">Bronze</td>
+                        </tr>
+                        </tbody>
+                        
+                    
+                  
+                  
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                2020 Results
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <table class="table">
+                    <table>
+                        <tbody>
+                          <tr>
+                            <td><strong>Name</strong></td>
+                            <td><strong>Points</strong></td>
+                            <td><strong>Prize</strong></td>
+                          </tr>
+                          <tr>
+                            <td>Marcelo Machado Lage</td>
+                            <td>255</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Gabriel Ribeiro Paiva</td>
+                            <td>225</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Rodrigo Salgado Domingos Porto</td>
+                            <td>225</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Gustavo Neves da Cruz</td>
+                            <td>220</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Olavo Paschoal Longo</td>
+                            <td>220</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Miguel De Carvalho Oliveira</td>
+                            <td>210</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Pablo Andrade Carvalho Barros</td>
+                            <td>195</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Sebastião Fróes Nachtergaele Gomes Navarro</td>
+                            <td>185</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Klaus Augustus Ramos Reiniger</td>
+                            <td>180</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Othon Daiki Ishiyi</td>
+                            <td>180</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Willian Miura Mori</td>
+                            <td>175</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Jonatan de Lima Santos</td>
+                            <td>170</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>João Guilherme Costa Viana</td>
+                            <td>165</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Pedro de Oliveira Lengruber Lack</td>
+                            <td>165</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Miguel dos Anjos Batista</td>
+                            <td>165</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Yvens Ian Prado Porto</td>
+                            <td>160</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>João Pedro Ramos Viana Costa</td>
+                            <td>155</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Eduardo Henrique Rodrigues do Nascimento</td>
+                            <td>155</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>João Arthur Marques Linhares</td>
+                            <td>155</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Ailton José da Silva Júnior</td>
+                            <td>145</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Enzo Pontes Saraiva de Moraes</td>
+                            <td>145</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Ramyro Corrêa Aquines</td>
+                            <td>145</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>João Marcelo Ribeiro Monteiro de Carvalho</td>
+                            <td>145</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Luís Felipe Pestana Giglio</td>
+                            <td>140</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Vinícius Kenji Amano Tanaka</td>
+                            <td>140</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Caio Harley Constancio Neves</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Caio Hermano Maia de Oliveira</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Luís Felipe de Almeida Marques</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Bruno de Moraes Dumont</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Pedro Porto de Carvalho Nunes</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Davi Gabriel Bandeira Coutinho</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Gabriel Cruz Vitale Torkomian</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Guilherme Motta Tranche</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                        </tbody>        
+                    </table>
+                    
+                  
+            
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThreee">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  2019 Results
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                  <table class="table">
+                        <tbody>
+                          <tr>
+                            <td><b>Name</b></td>
+                            <td><b>Points</b></td>
+                            <td><b>Prize</b></td>
+                          </tr>
+                          <tr>
+                            <td>Pedro Gomes Cabral</td>
+                            <td>260</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Bernardo Peruzzo Trevizan</td>
+                            <td>235</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Pablo Andrade Carvalho Barros</td>
+                            <td>230</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Olavo Paschoal Longo</td>
+                            <td>220</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Guilherme Zeus Dantas e Moura</td>
+                            <td>210</td>
+                            <td>Gold</td>
+                          </tr>
+                          <tr>
+                            <td>Gabriel Ribeiro Paiva</td>
+                            <td>195</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Francisco Moreira Machado Neto</td>
+                            <td>195</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Luciano Rodrigues de Oliveira Junior</td>
+                            <td>175</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Enzo Pontes Saraiva de Moraes</td>
+                            <td>170</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>João Pedro Ramos Viana Costa</td>
+                            <td>165</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Daniel Yamamoto Damico</td>
+                            <td>165</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Antonio Luis Alves Azevedo</td>
+                            <td>165</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Willian Miura Mori</td>
+                            <td>160</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Guilherme Bernardo da Silva</td>
+                            <td>160</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Sebastião Froes N. Gomes Navarro</td>
+                            <td>155</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Davi Carvalho Mota</td>
+                            <td>155</td>
+                            <td>Silver</td>
+                          </tr>
+                          <tr>
+                            <td>Marcelo Machado Lage</td>
+                            <td>145</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Davi Gabriel Bandeira Coutinho</td>
+                            <td>145</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Ailton Jose da Silva Junior</td>
+                            <td>145</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Gabriel Capelo Domingues</td>
+                            <td>140</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Pedro de Oliveira Lengruber Lack</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Gustavo Neves da Cruz</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Fernando Yang</td>
+                            <td>135</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Luis Felipe de Almeida Marques</td>
+                            <td>130</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Gabriel Cruz Vitale Torkomian</td>
+                            <td>130</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Tiago da Silva Henrique</td>
+                            <td>125</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Moriân Lima dos Santos</td>
+                            <td>125</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Pedro Augusto Barbosa Cardoso</td>
+                            <td>120</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Miguel de Carvalho Oliveira</td>
+                            <td>120</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Rafael Salles Moreira</td>
+                            <td>110</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Philipe Medeiros Serra</td>
+                            <td>110</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Guilherme Motta Tranche</td>
+                            <td>110</td>
+                            <td>Bronze</td>
+                          </tr>
+                          <tr>
+                            <td>Guilherme Ferreira Gomes</td>
+                            <td>110</td>
+                            <td>Bronze</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                    
+                    </div>
+                </div>
+              </div>
+      
+                    </div>  
+
+<br>
+    <h2 style="color: white; font-size: 50px;">Past Brazilian Problem Sets</h2>
+    <table>
+        <thead>
+          <tr>
+            <th class="highlightDown"><a>Year</a></th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr class="imp">
+                <td align="center"><a>2022</a></td>
+                <td align="center"><a href="https://www.obm.org.br/content/uploads/2022/11/obm2022_nivel3.pdf">PDF</a></td>
+              </tr>
+
+              <tr class="imp">
+                <td align="center"><a>2021</a></td>
+                <td align="center"><a href="https://www.obm.org.br/content/uploads/2022/02/obm2021_nivel3.pdf">PDF</a></td>
+              </tr>
+          
+            <tr class="imp">
+            <td align="center"><a>2020</a></td>
+            <td align="center"><a href="https://www.obm.org.br/content/uploads/2021/03/OBM_2020_Nivel3.pdf">PDF</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2019</a></td>
+            <td align="center"><a href="https://www.obm.org.br/content/uploads/2019/11/Prova_Nivel_3_OBM_2019.pdf">PDF</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2018</a></td>
+            <td align="center"><a href="https://www.obm.org.br/content/uploads/2018/11/Prova_Nivel_3.pdf">PDF</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2017</a></td>
+            <td align="center"><a href="https://www.obm.org.br/content/uploads/2017/12/Prova_Nivel_3_OBM_2017.pdf">PDF</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+<br>
+<footer>
+    <b>E-mail:</b>
+    <a href="mailto:ea@globtalent.org">ea@globtalent.org</a>
+</footer>
+</body>
+</html>
