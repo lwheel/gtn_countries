@@ -7,6 +7,10 @@
     <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
     <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
     <title>Global Talent Network</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
@@ -178,7 +182,7 @@ footer::before {
             font-size: 20px;
             margin: 30px;
             padding: 4px;
-            color: #ffffff;
+            color: white;
             margin-right: 40px; /* Added wider margin between columns */
             padding-left: 20px; /* Added padding to create spacing */
             padding-right: 20px; /* Added padding to create spacing */
@@ -230,10 +234,62 @@ footer::before {
     .dropdown-content a:hover {
       background-color: #f1f1f1;
     }
+    .card-header {
+  background-color: #424547;
+  color: white;
+  text-decoration: none;
+  border: none; /* Remove the border */
+    outline: none;
+}
+.card {
+    border: none; /* Remove the border */
+    margin-bottom: 10px;
+  }
+.card-header button {
+  color: white;
+  text-decoration: none;
+}
+
+.card-body {
+  background-color: #1b1d1e;
+}
+
+.accordian {
+  border: none; /* Remove the border */
+}
+hr {
+  background-color: white;
+}
   p {
     color: white;
 }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var accordion = document.getElementById("accordion");
+    var buttons = accordion.getElementsByClassName("btn");
+    var contents = accordion.getElementsByClassName("collapse");
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+        var content = this.nextElementSibling;
+        var isCollapsed = content.classList.contains("show");
+
+        if (isCollapsed) {
+            content.classList.remove("show");
+        } else {
+            content.classList.add("show");
+        }
+        });
+
+        // Close the content panels by default
+        contents[i].classList.remove("show");
+    }
+    });
+
+
+
+</script>
 </head>
 <body>
   <div id="header">
@@ -245,13 +301,12 @@ footer::before {
     <div id="menu">
       <a href="https://www.globtalent.org/">Home</a> &bull;
       <div class="dropdown">
-        <a href="index.html">Partner Math Olympiads</a> &bull;
+        <a href="index.html">Partner Math Olympiads</a>
         <div class="dropdown-content">
           <a href="problems.html">Past Problems</a>
           <a href="total_results.html">Results by Country</a>
         </div>
       </div>
-
       <div class="dropdown">
         <a href="countries.html">Countries</a>
         <div class="dropdown-content">
@@ -259,199 +314,36 @@ footer::before {
           <a href="india_home.html">India</a>
         </div>
       </div>
-
     </div>
   </div>
 
 <hr>
 <div id="main">
-    <h2 style="color: white;">2022</h2>
+    <h2 style="color: white; font-size: 50px;">Myanmar</h2>
+    
+    <p> Results are not publicly available.</p>
 
+<br>
+    <h2 style="color: white; font-size: 50px;">Past Myanmarese Problem Sets</h2>
     <table>
         <thead>
-        <tr>
-            <th><a style="color: white;">Code</a></th>
-            <th class="highlightUp"><a style="color: white;">Country</a></th>
-            <th><a style="color: white;">National MO site</a></th>
-        </tr>
+          <tr>
+            <th class="highlightDown"><a>Year</a></th>
+            <th>Access</th>
+          </tr>
         </thead>
         <tbody>
-        <tr class="imp">
-            <td align="center"><a href="rwanda.html">RWA</a></td>
-            <td><a href="rwanda.html">Rwanda</a></td>
-            <td><a href="	https://rwandamatholympiad.com">	https://rwandamatholympiad.com</a></td>
-        </tr>
-        <tr class="imp">
-            <td align="center"><a href="kenya.html">KEN</a></td>
-            <td><a href="kenya.html">Kenya</a></td>
-            <td><a href="http://kkmo-official.com">http://kkmo-official.com</a></td>
-        </tr>
-        <tr class="imp">
-          <td align="center"><a href="ireland.html">IRE</a></td>
-          <td><a href="ireland.html">Ireland</a></td>
-          <td><a href="http://www.irmo.ie/">http://www.irmo.ie/</a></td>
-      </tr>
-      <tr class="imp">
-        <td align="center"><a href="china.html">CHI</a></td>
-        <td><a href="china.html">China</a></td>
-        <td><a>N/A</a></td>
-    </tr>
-    <tr class="imp">
-      <td align="center"><a href="india.html">IND</a></td>
-      <td><a href="india.html">India</a></td>
-      <td><a href = "http://olympiads.hbcse.tifr.res.in/subjects/mathematics">http://olympiads.hbcse.tifr.res.in/subjects/mathematics</a></td>
-  </tr>
-  <tr class="imp">
-    <td align="center"><a href="usa.html">USA</a></td>
-    <td><a href="usa.html">USA</a></td>
-    <td><a href = "http://amc.maa.org/">http://amc.maa.org/</a></td>
-</tr>
+            <tr class="imp">
+                <td align="center"><a>2019</a></td>
+                <td align="center"><a href="https://drive.google.com/drive/folders/11Tcn482qxGbes8d60A1MABRDnkGOe_-3">Link</a></td>
+              </tr>
 
-<tr class="imp">
-  <td align="center"><a href="indonesia.html">IDN</a></td>
-  <td><a href="indonesia.html">Indonesia</a></td>
-  <td><a href = "https://ktom-tomi.or.id/">https://ktom-tomi.or.id/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="pakistan.html">PAK</a></td>
-  <td><a href="pakistan.html">Pakistan</a></td>
-  <td><a href = "https://greatfuture.org.pk/">https://greatfuture.org.pk/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="brazil.html">BRZ</a></td>
-  <td><a href="brazil.html">Brazil</a></td>
-  <td><a href = "https://www.obm.org.br/">https://www.obm.org.br//</a></td>
-</tr>
-
-
-<tr class="imp">
-  <td align="center"><a href="nigeria.html">NGA</a></td>
-  <td><a href="nigeria.html">Nigeria</a></td>
-  <td><a href = "https://specialmaths.ng">https://specialmaths.ng</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="bangladesh.html">BGD</a></td>
-  <td><a href="bangladesh.html">Bangladesh</a></td>
-  <td><a href = "https://matholympiad.org.bd/">https://matholympiad.org.bd/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="russia.html">RUS</a></td>
-  <td><a href="russia.html">Russia</a></td>
-  <td><a href = "https://rosolymp.ru/index.php?option=com_content&view=article&id=9906&Itemid=6701">https://rosolymp.ru/index.php?option=com_content&view=article&id=9906&Itemid=6701</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="mexico.html">MEX</a></td>
-  <td><a href="mexico.html">Mexico</a></td>
-  <td><a href = "https://www.ommenlinea.org/">https://www.ommenlinea.org/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="japan.html">JPN</a></td>
-  <td><a href="japan.html">Japan</a></td>
-  <td><a href = "http://www.imojp.org">http://www.imojp.org</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="ethiopia.html">ETH</a></td>
-  <td><a href="ethiopia.html">Ethiopia</a></td>
-  <td><a>N/A</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="phillipines.html">PHI</a></td>
-  <td><a href="phillipines.html">Phillipines</a></td>
-  <td><a href = "http://pmo.ph">http://pmo.ph</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="egypt.html">EGY</a></td>
-  <td><a href="egpyt.html">Egypt</a></td>
-  <td><a>N/A</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="vietnam.html">VNM</a></td>
-  <td><a href="vietnam.html">Vietnam</a></td>
-  <td><a>N/A</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="drcongo.html">DRC</a></td>
-  <td><a href="drcongo.html">The Democratic Republic of the Congo</a></td>
-  <td><a>N/A</a></td>
-</tr>
-
-
-<tr class="imp">
-  <td align="center"><a href="turkiye.html">TUR</a></td>
-  <td><a href="turkiye.html">Turkiye</a></td>
-  <td><a>N/A</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="iran.html">IRN</a></td>
-  <td><a href="iran.html">Iran</a></td>
-  <td><a>N/A</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="germany.html">GER</a></td>
-  <td><a href="germany.html">Germany</a></td>
-  <td><a href = "https://www.mathe-wettbewerbe.de/">https://www.mathe-wettbewerbe.de/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="thailand.html">THA</a></td>
-  <td><a href="thailand.html">Thailand</a></td>
-  <td><a href = "https://globalolympiadsacademy.com/timo-3/">https://globalolympiadsacademy.com/timo-3/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="uk.html">UNK</a></td>
-  <td><a href="uk.html">United Kingdom</a></td>
-  <td><a href = "http://www.bmoc.maths.org/">http://www.bmoc.maths.org/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="france.html">FRA</a></td>
-  <td><a href="france.html">France</a></td>
-  <td><a href = "http://www.animath.fr/">http://www.animath.fr/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="italy.html">ITA</a></td>
-  <td><a href="italy.html">Italy</a></td>
-  <td><a href = "http://olimpiadi.dm.unibo.it/">http://olimpiadi.dm.unibo.it/</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="tanzania.html">TAN</a></td>
-  <td><a href="tanzania.html">Tanzania</a></td>
-  <td><a>N/A</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="southafrica.html">SAF</a></td>
-  <td><a href="southafrica.html">South Africa</a></td>
-  <td><a href = "http://www.samf.ac.za">hhttp://www.samf.ac.za</a></td>
-</tr>
-
-<tr class="imp">
-  <td align="center"><a href="myanmar.html">MYA</a></td>
-  <td><a href="myanmar.html">Myanmar</a></td>
-  <td><a href = "http://www.samf.ac.za">hhttp://www.samf.ac.za</a></td>
-</tr>
-
+             
         </tbody>
-    </table>
+      </table>
+
 </div>
 <br>
-
 <footer>
     <b>E-mail:</b>
     <a href="mailto:ea@globtalent.org">ea@globtalent.org</a>
