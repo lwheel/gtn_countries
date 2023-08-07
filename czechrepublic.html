@@ -7,6 +7,10 @@
     <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
     <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
     <title>Global Talent Network</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
@@ -24,11 +28,6 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-        }
-
-        p {
-            font-family: 'Comfortaa', cursive;
-            color: white;
         }
 
         .content {
@@ -183,7 +182,7 @@ footer::before {
             font-size: 20px;
             margin: 30px;
             padding: 4px;
-            color: #ffffff;
+            color: white;
             margin-right: 40px; /* Added wider margin between columns */
             padding-left: 20px; /* Added padding to create spacing */
             padding-right: 20px; /* Added padding to create spacing */
@@ -235,10 +234,62 @@ footer::before {
     .dropdown-content a:hover {
       background-color: #f1f1f1;
     }
+    .card-header {
+  background-color: #424547;
+  color: white;
+  text-decoration: none;
+  border: none; /* Remove the border */
+    outline: none;
+}
+.card {
+    border: none; /* Remove the border */
+    margin-bottom: 10px;
+  }
+.card-header button {
+  color: white;
+  text-decoration: none;
+}
+
+.card-body {
+  background-color: #1b1d1e;
+}
+
+.accordian {
+  border: none; /* Remove the border */
+}
+hr {
+  background-color: white;
+}
   p {
     color: white;
 }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var accordion = document.getElementById("accordion");
+    var buttons = accordion.getElementsByClassName("btn");
+    var contents = accordion.getElementsByClassName("collapse");
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+        var content = this.nextElementSibling;
+        var isCollapsed = content.classList.contains("show");
+
+        if (isCollapsed) {
+            content.classList.remove("show");
+        } else {
+            content.classList.add("show");
+        }
+        });
+
+        // Close the content panels by default
+        contents[i].classList.remove("show");
+    }
+    });
+
+
+
+</script>
 </head>
 <body>
   <div id="header">
@@ -268,14 +319,54 @@ footer::before {
 
 <hr>
 <div id="main">
-    <h2 style="color: white; font-size: 50px;">Albania</h2>
+    <h2 style="color: white; font-size: 50px;">Czech Republic</h2>
     
-    <p>No results have been made public by the Albanian Mathematical Olympiad</p>
+<p> Results are not publicly available.</p>
 
+<br>
+    <h2 style="color: white; font-size: 50px;">Past Czech Republic Problem Sets</h2>
+    <table>
+        <thead>
+          <tr>
+            <th class="highlightDown"><a>Year</a></th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
 
+            <tr class="imp">
+                <td align="center"><a>2023</a></td>
+                <td align="center"><a href="https://www.matematickaolympiada.cz/media/3549099/a72e.pdf">PDF</a></td>
+              </tr>
 
-    <h2 style="color: white;">Past Albanian Problem Sets</h2>
-<p>No problem sets have been made public by the Albanian Mathematical Olympiad</p>
+              <tr class="imp">
+                <td align="center"><a>2022</a></td>
+                <td align="center"><a href="https://www.matematickaolympiada.cz/media/3459597/a71angl-small.pdf">PDF</a></td>
+              </tr>
+
+          <tr class="imp">
+            <td align="center"><a>2019</a></td>
+            <td align="center"><a href="https://www.matematickaolympiada.cz/media/3459596/a68angl.pdf">PDF</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2018</a></td>
+            <td align="center"><a href="https://www.matematickaolympiada.cz/media/3459612/brozura_a67angl_new.pdf">PDF</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2017</a></td>
+            <td align="center"><a href="https://matholympiad.org.bd/questions/16-bdmo-2017">Link</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2016</a></td>
+            <td align="center"><a href="https://www.matematickaolympiada.cz/media/3459595/a65angl.pdf">Link</a></td>
+          </tr>
+          <tr class="imp">
+            <td align="center"><a>2015</a></td>
+            <td align="center"><a href="https://www.matematickaolympiada.cz/media/3459594/a64angl.pdf">Link</a></td>
+          </tr>
+         
+        </tbody>
+      </table>
 
 </div>
 <br>
