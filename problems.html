@@ -179,6 +179,7 @@ footer::before {
         th,
         td {
             border: 2px solid #1b1d1e;
+            text-align: center;
             font-size: 20px;
             margin: 0px;
             padding: 4px;
@@ -188,6 +189,12 @@ footer::before {
             padding-right: 20px; /* Added padding to create spacing */
             transition: background-color 0.3s ease-in-out; /* Added transition effect */
         }
+
+        table.table th, table.table td {
+    text-align: center !important;
+    /* other styles */
+}
+
 
         th a {
           font-size: 30px; /* Increased font size for column titles */
