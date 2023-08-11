@@ -265,25 +265,23 @@ hr {
 }
   </style>
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var accordion = document.getElementById("accordion");
-    var buttons = accordion.getElementsByClassName("btn");
-    var contents = accordion.getElementsByClassName("collapse");
+document.addEventListener("DOMContentLoaded", function() {
+var accordion = document.getElementById("accordion");
+var buttons = accordion.getElementsByClassName("btn");
+var contents = accordion.getElementsByClassName("collapse");
 
-    for (var i = 0; i < buttons.length; i++) {
+for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
         var content = this.nextElementSibling;
         var isCollapsed = content.classList.contains("show");
 
-        if (isCollapsed) {
-            content.classList.remove("show");
-        } else {
+        if (!isCollapsed) {
             content.classList.add("show");
         }
         });
 
         // Close the content panels by default
-        contents[i].classList.remove("show");
+        contents[i].classList.add("hide");
     }
     });
 
