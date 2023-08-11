@@ -265,23 +265,25 @@ hr {
 }
   </style>
   <script>
-document.addEventListener("DOMContentLoaded", function() {
-var accordion = document.getElementById("accordion");
-var buttons = accordion.getElementsByClassName("btn");
-var contents = accordion.getElementsByClassName("collapse");
+    document.addEventListener("DOMContentLoaded", function() {
+    var accordion = document.getElementById("accordion");
+    var buttons = accordion.getElementsByClassName("btn");
+    var contents = accordion.getElementsByClassName("collapse");
 
-for (var i = 0; i < buttons.length; i++) {
+    for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
         var content = this.nextElementSibling;
         var isCollapsed = content.classList.contains("show");
 
-        if (!isCollapsed) {
+        if (isCollapsed) {
+            content.classList.remove("show");
+        } else {
             content.classList.add("show");
         }
         });
 
         // Close the content panels by default
-        contents[i].classList.add("hide");
+        contents[i].classList.remove("show");
     }
     });
 
@@ -331,7 +333,7 @@ for (var i = 0; i < buttons.length; i++) {
             </h5>
           </div>
       
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
                 <table class="table">
                         <tbody>
@@ -484,7 +486,7 @@ for (var i = 0; i < buttons.length; i++) {
                             </h5>
                           </div>
                       
-                          <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordion">
+                          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                             <div class="card-body">
                                 <table class="table">
                                         <tbody>
@@ -670,7 +672,7 @@ for (var i = 0; i < buttons.length; i++) {
                             </h5>
                           </div>
                       
-                          <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordion">
+                          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
                             <div class="card-body">
                                 <table class="table">
                                             <tr>
@@ -776,7 +778,7 @@ for (var i = 0; i < buttons.length; i++) {
                                             </h5>
                                           </div>
                                       
-                                          <div id="collapseEight" class="collapse show" aria-labelledby="headingEight" data-parent="#accordion">
+                                          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
                                             <div class="card-body">
                                                 <table class="table">
                                                         <thead>
@@ -1077,7 +1079,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                             </h5>
                                                           </div>
                                                       
-                                                          <div id="collapseEleven" class="collapse show" aria-labelledby="headingEleven" data-parent="#accordion">
+                                                          <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
                                                             <div class="card-body">
                                                                 <table class="table">
                                                                             <tr>
@@ -1177,7 +1179,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                             </h5>
                                                                           </div>
                                                                       
-                                                                          <div id="collapseTwelve" class="collapse show" aria-labelledby="headingTwelve" data-parent="#accordion">
+                                                                          <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
                                                                             <div class="card-body">
                                                                                 <table class="table">
                                                                                     <tbody>
@@ -1695,7 +1697,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                             </h5>
                                                                                           </div>
                                                                                       
-                                                                                          <div id="collapseFifteen" class="collapse show" aria-labelledby="headingFifteen" data-parent="#accordion">
+                                                                                          <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion">
                                                                                             <div class="card-body">
                                                                                                 <table class="table">
                                                                                                         <tr>
@@ -1737,7 +1739,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                             </h5>
                                                                                                           </div>
                                                                                                       
-                                                                                                          <div id="collapseSixteen" class="collapse show" aria-labelledby="headingSixteen" data-parent="#accordion">
+                                                                                                          <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion">
                                                                                                             <div class="card-body">
                                                                                                                 <table class="table">
                                                                                                                         <tr>
@@ -1966,7 +1968,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                             </h5>
                                                                                                           </div>
                                                                                                       
-                                                                                                          <div id="collapseTwenty" class="collapse show" aria-labelledby="headingTwenty" data-parent="#accordion">
+                                                                                                          <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#accordion">
                                                                                                             <div class="card-body">
                                                                                                                 <table class="table">
                                                                                                                     <thread>
@@ -2238,7 +2240,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                             </h5>
                                                                                                                           </div>
                                                                                                                       
-                                                                                                                          <div id="collapseTwentyfour" class="collapse show" aria-labelledby="headingTwentyfour" data-parent="#accordion">
+                                                                                                                          <div id="collapseTwentyfour" class="collapse" aria-labelledby="headingTwentyfour" data-parent="#accordion">
                                                                                                                             <div class="card-body">
                                                                                                                                 <table class="table">
                                                                                                                                         <tr>
@@ -2388,7 +2390,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                             </h5>
                                                                                                                                           </div>
                                                                                                                                       
-                                                                                                                                          <div id="collapseTwentysix" class="collapse show" aria-labelledby="headingTwentysix" data-parent="#accordion">
+                                                                                                                                          <div id="collapseTwentysix" class="collapse" aria-labelledby="headingTwentysix" data-parent="#accordion">
                                                                                                                                             <div class="card-body">
                                                                                                                                                 <table class="table">
                                                                                                                                                     <tr>
@@ -2469,7 +2471,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                             </h5>
                                                                                                                                                           </div>
                                                                                                                                                       
-                                                                                                                                                          <div id="collapseTwentyeight" class="collapse show" aria-labelledby="headingTwentyeight" data-parent="#accordion">
+                                                                                                                                                          <div id="collapseTwentyeight" class="collapse" aria-labelledby="headingTwentyeight" data-parent="#accordion">
                                                                                                                                                             <div class="card-body">
                                                                                                                                                                 <table class="table">
                                                                                                                                                 
@@ -2632,7 +2634,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                             </h5>
                                                                                                                                                           </div>
                                                                                                                                                       
-                                                                                                                                                          <div id="collapseTwentynine" class="collapse show" aria-labelledby="headingTwentynine" data-parent="#accordion">
+                                                                                                                                                          <div id="collapseTwentynine" class="collapse" aria-labelledby="headingTwentynine" data-parent="#accordion">
                                                                                                                                                             <div class="card-body">
                                                                                                                                                                 <table class="table">
                                                                                                                                                                         <tr>
@@ -2873,7 +2875,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                             </h5>
                                                                                                                                                                           </div>
                                                                                                                                                                       
-                                                                                                                                                                          <div id="collapseThirty" class="collapse show" aria-labelledby="headingThirty" data-parent="#accordion">
+                                                                                                                                                                          <div id="collapseThirty" class="collapse" aria-labelledby="headingThirty" data-parent="#accordion">
                                                                                                                                                                             <div class="card-body">
                                                                                                                                                                                 <table class="table">
                                                                                                                                                                                         <thead>
@@ -2968,7 +2970,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                             </h5>
                                                                                                                                                                                           </div>
                                                                                                                                                                                       
-                                                                                                                                                                                          <div id="collapseThirtyone" class="collapse show" aria-labelledby="headingThirtyone" data-parent="#accordion">
+                                                                                                                                                                                          <div id="collapseThirtyone" class="collapse" aria-labelledby="headingThirtyone" data-parent="#accordion">
                                                                                                                                                                                             <div class="card-body">
                                                                                                                                                                                                 <table class="table">
                                                                                                                                                                                                         <tr class="ro3">
@@ -3117,7 +3119,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                             </h5>
                                                                                                                                                                                           </div>
                                                                                                                                                                                       
-                                                                                                                                                                                          <div id="collapseThirtyone" class="collapse show" aria-labelledby="headingThirtyone" data-parent="#accordion">
+                                                                                                                                                                                          <div id="collapseThirtyone" class="collapse" aria-labelledby="headingThirtyone" data-parent="#accordion">
                                                                                                                                                                                             <div class="card-body">
                                                                                                                                                                                                 <table class="table">
                                                                                                                                                                                                     <thread>
@@ -3271,7 +3273,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                               </h5>
                                                                                                                                                                                             </div>
                                                                                                                                                                                         
-                                                                                                                                                                                            <div id="collapseThirtytwo" class="collapse show" aria-labelledby="headingThirtytwo" data-parent="#accordion">
+                                                                                                                                                                                            <div id="collapseThirtytwo" class="collapse" aria-labelledby="headingThirtytwo" data-parent="#accordion">
                                                                                                                                                                                               <div class="card-body">
                                                                                                                                                                                                   <table class="table">
                                                                                                                                                                                                       <table class="display" id="graduatoria">
@@ -3403,7 +3405,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                                               </h5>
                                                                                                                                                                                                             </div>
                                                                                                                                                                                                         
-                                                                                                                                                                                                            <div id="collapseThirtytwo" class="collapse show" aria-labelledby="headingThirtytwo" data-parent="#accordion">
+                                                                                                                                                                                                            <div id="collapseThirtytwo" class="collapse" aria-labelledby="headingThirtytwo" data-parent="#accordion">
                                                                                                                                                                                                               <div class="card-body">
                                                                                                                                                                                                                   <table class="table">
                                                                                                                                                                                                                           <tr>
@@ -3864,7 +3866,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                                                               </h5>
                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                         
-                                                                                                                                                                                                                            <div id="collapseThirtysix" class="collapse show" aria-labelledby="headingThirtysix" data-parent="#accordion">
+                                                                                                                                                                                                                            <div id="collapseThirtysix" class="collapse" aria-labelledby="headingThirtysix" data-parent="#accordion">
                                                                                                                                                                                                                               <div class="card-body">
                                                                                                                                                                                                                                   <table class="table">
                                                                                                                                                                                                                                       <thread>
@@ -4592,7 +4594,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                                                                 </h5>
                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                           
-                                                                                                                                                                                                                              <div id="collapseThirtyeight" class="collapse show" aria-labelledby="headingThirtyeight" data-parent="#accordion">
+                                                                                                                                                                                                                              <div id="collapseThirtyeight" class="collapse" aria-labelledby="headingThirtyeight" data-parent="#accordion">
                                                                                                                                                                                                                                 <div class="card-body">
                                                                                                                                                                                                                                     <table class="table">
                                                                                                                                                                                                                                             <thead>
@@ -4674,7 +4676,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                                                                                 </h5>
                                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                              <div id="collapseThirtynine" class="collapse show" aria-labelledby="headingThirtynine" data-parent="#accordion">
+                                                                                                                                                                                                                                              <div id="collapseThirtynine" class="collapse" aria-labelledby="headingThirtynine" data-parent="#accordion">
                                                                                                                                                                                                                                                 <div class="card-body">
                                                                                                                                                                                                                                                     <table class="table">
                                                                                                                                                                                                                                                             <thead>
@@ -4734,7 +4736,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                                                                                                 </h5>
                                                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                                              <div id="collapseFourty" class="collapse show" aria-labelledby="headingFourty" data-parent="#accordion">
+                                                                                                                                                                                                                                                              <div id="collapseFourty" class="collapse" aria-labelledby="headingFourty" data-parent="#accordion">
                                                                                                                                                                                                                                                                 <div class="card-body">
                                                                                                                                                                                                                                                                     <table class="table">
                                                                                                                                                                                                                                                                             <thead>
@@ -4840,7 +4842,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                                                                                                                 </h5>
                                                                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                                                              <div id="collapseFourtyone" class="collapse show" aria-labelledby="headingFourtyone" data-parent="#accordion">
+                                                                                                                                                                                                                                                                              <div id="collapseFourtyone" class="collapse" aria-labelledby="headingFourtyone" data-parent="#accordion">
                                                                                                                                                                                                                                                                                 <div class="card-body">
                                                                                                                                                                                                                                                                                     <table class="table">
                                                                                                                                                                                                                                                                                             <tr>
@@ -5062,7 +5064,7 @@ for (var i = 0; i < buttons.length; i++) {
                                                                                                                                                                                                                                                                                 </h5>
                                                                                                                                                                                                                                                                               </div>
                                                                                                                                                                                                                                                                           
-                                                                                                                                                                                                                                                                              <div id="collapseFourtytwo" class="collapse show" aria-labelledby="headingFourtytwo" data-parent="#accordion">
+                                                                                                                                                                                                                                                                              <div id="collapseFourtytwo" class="collapse" aria-labelledby="headingFourtytwo" data-parent="#accordion">
                                                                                                                                                                                                                                                                                 <div class="card-body">
                                                                                                                                                                                                                                                                                     <table class="table">
                                                                                                                                                                                                                                                                                             <thead>
