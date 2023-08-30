@@ -12,47 +12,46 @@
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
 
         body {
-    font-family: 'Comfortaa', cursive;
-    background-color: white;
-    margin: 0;  /* Set margin to 0 */
+          font-family: 'Comfortaa', cursive;
+          background-color: white;
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden; /* Prevent horizontal scrolling */
+      }
+
+      #header {
+          background-color: #1b1d1e;
+          padding: 40px;
+          margin: 0;
+          width: 100%;
+          color: black;
+          background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+          background-size: contain;
+          background-repeat: repeat;
+      }
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 20%;
+}
+
+.centered-heading {
+    font-family: 'Merriweather', serif;
+    margin: 0;
     padding: 0;
-    overflow: auto;
-}
-
-#header {
-    background-color: #1b1d1e;
-    padding: 40px;  /* Set padding to 0 */
-    margin: 0;  /* Set margin to 0 */
-    width: 100%;  /* Set width to 100% */
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
     color: black;
-    background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
-    background-size: contain;
-    background-repeat: repeat;
 }
-
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .content {
-            flex: 1;
-            padding: 2rem;
-            margin-left: 20%;
-        }
-
-        .centered-heading {
-            font-family: 'Merriweather', serif;
-            margin: 0;
-            padding: 0;
-            overflow: auto;
-            text-align: center;
-            font-weight: 700;
-            font-size: 50px;
-            color: black; /* Set the text color to white */
-        }
 
         .centered-image {
             display: flex;
@@ -157,10 +156,10 @@ footer::before {
 
 
         .intro {
-            text-align: left;
-            margin-left: 1000px;
-            margin-right: 1000px;
-        }
+    text-align: left;
+    margin-left: 20px;  /* Reduced margin */
+    margin-right: 20px;  /* Reduced margin */
+}
 
         /* Media Queries */
         @media screen and (max-width: 768px) {
