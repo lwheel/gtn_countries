@@ -351,7 +351,7 @@ hr {{
     <b style: color="white" margin="2 rem">E-mail:</b>
     <a href="mailto:ea@globtalent.org" style: color="white" margin="2 rem">ea@globtalent.org</a>
 </footer>
-
+</div>
 </html>
 '''
 
