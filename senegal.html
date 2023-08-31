@@ -24,7 +24,17 @@
   background-color: white;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* use vh units to fill full view height */
+}
 
+.content {
+  flex-grow: 1; /* allows this container to grow and push the footer to the bottom */
+  padding: 2rem;
+  margin-left: 20%;
+}
 
       #header {
           background-color: #1b1d1e;
@@ -253,7 +263,6 @@ footer::before {
 </script>
 </head>
 <body>
-  <div class="container">
   <div id="header" style="margin: 0px;">
     <div id="h1">
       <h1 class="centered-heading">
@@ -273,7 +282,6 @@ footer::before {
 
     </div>
   </div>
-  <div class="content">
 <div id="main">
     <h2 style="color: black; font-size: 50px; margin-top: .5em; margin-bottom: .5em;">Senegal</h2>
     
@@ -283,13 +291,12 @@ footer::before {
     <h2 style="color: black; font-size: 50px; margin-top: .5em; margin-bottom: .5em;">Past Senegalese Problem Sets</h2>
 
     <p> Problems are not available.</p>
-  </div>
 </div>
-
-<footer>
-  <b style="color: white; margin: 2rem;">E-mail:</b>
-  <a href="mailto:ea@globtalent.org" style="color: white; margin: 2rem;">ea@globtalent.org</a>
-</footer>
-</div> <!-- Close container div -->
+<br>
 </body>
+<footer>
+    <b style: color="white" margin="2 rem">E-mail:</b>
+    <a href="mailto:ea@globtalent.org" style: color="white" margin="2 rem">ea@globtalent.org</a>
+</footer>
+
 </html>
