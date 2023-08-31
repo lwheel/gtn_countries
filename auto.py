@@ -335,12 +335,12 @@ hr {{
     </div>
   </div>
 <div id="main">
-    <h2 style="color: black; font-size: 50px; margin-top: 3em; margin-bottom: 3em;">{countries}</h2>
+    <h2 style="color: black; font-size: 50px; margin-top: .5em; margin-bottom: .5em;">{countries}</h2>
     
 <p> {countries} is not currently hosting a math olympiad.</p>
 
 <br>
-    <h2 style="color: black; font-size: 50px; margin-top: 3em; margin-bottom: 3em;">Past {adjective} Problem Sets</h2>
+    <h2 style="color: black; font-size: 50px; margin-top: .5em; margin-bottom: .5em;">Past {adjective} Problem Sets</h2>
 
     <p> Problems are not available.</p>
 </div>
