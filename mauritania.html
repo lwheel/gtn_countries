@@ -93,10 +93,11 @@ background-color: white;
 }
 
 footer {
-  flex-shrink: 0; /* prevents the footer from shrinking */
-background-color: black;
-color: white;
-padding: 1em 2em;
+  flex-shrink: 0;
+  background-color: black;
+  color: white;
+  padding: 1em 2em;
+  width: 100%;  /* Add this line */
 }
 
 footer b, footer a {
@@ -259,7 +260,7 @@ p {
 </head>
 <body>
   <div class = "container">
-  <div id="header" style="margin: 0px;">
+  <div id="header">
     <div id="h1">
       <h1 class="centered-heading">
         <a href="https://www.globtalent.org/">Global Talent Network</a>
@@ -359,10 +360,10 @@ p {
 
 </div>
 <br>
-</body>
 <footer>
     <b style: color="white" margin="2 rem">E-mail:</b>
     <a href="mailto:ea@globtalent.org" style: color="white" margin="2 rem">ea@globtalent.org</a>
 </footer>
 </div>
+</body>
 </html>
