@@ -16,37 +16,48 @@
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
 
-        body {
-            font-family: 'Comfortaa', cursive;
-            background-color: #1b1d1e;
-            margin: 0;
-            margin: 40px;
-            padding: 0;
-            overflow: auto;
-        }
+        body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', cursive;
+  background-color: white;
+}
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* use vh units to fill full view height */
+}
 
-        .content {
-            flex: 1;
-            padding: 2rem;
-            margin-left: 20%;
-        }
+.content {
+  flex-grow: 1; /* allows this container to grow and push the footer to the bottom */
+  padding: 2rem;
+  margin-left: 20%;
+}
 
-        .centered-heading {
-            font-family: 'Merriweather', serif;
-            margin: 0;
-            padding: 0;
-            overflow: auto;
-            text-align: center;
-            font-weight: 700;
-            font-size: 50px;
-            color: white; /* Set the text color to white */
-        }
+      #header {
+          background-color: #1b1d1e;
+          padding: 40px;
+          margin: 0;
+          width: 100%;
+          color: black;
+          background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+          background-size: contain;
+          background-repeat: repeat;
+      }
+
+
+
+.centered-heading {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    color: black;
+}
 
         .centered-image {
             display: flex;
@@ -54,11 +65,6 @@
             margin-top: 1rem;
         }
 
-        #header {
-            background-color: #1b1d1e;
-            padding: 2rem;
-            color: #ffffff;
-        }
 
         .top-left-corner {
             position: absolute;
@@ -88,22 +94,17 @@
             color: #dee0e7;
         }
 
-   footer {
- position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.2em 2em;
-  box-sizing: border-box;
-  margin: 0;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
-  background-size: contain;
-  background-repeat: repeat;
-  line-height: 1.2;
+        footer {
+  background-color: black;
+  color: white;
+  padding: 1em 2em;
+}
+
+footer b, footer a {
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
 }
 
 footer::before {
@@ -113,21 +114,11 @@ footer::before {
   left: 0;
   width: 10%;
   height: 120%; /* Adjust the height to leave space for the text */
-  background-color: rgba(255, 255, 255, 0.4); /* Change the opacity to your liking */
+  background-color: black(255, 255, 255, 0.4); /* Change the opacity to your liking */
   z-index: -1;
 }
 
-   footer b {
-      font-size: 10px;
-      font-weight: 600;
-      margin-top: auto;
-  }
-
-  footer a {
-      color: rgb(0, 0, 0);
-      font-size: 10px;
-      font-weight: 600;
-  }
+  
 
         #main {
             margin-left: 28px; /* Adjust this value to move the content further to the right */
@@ -138,32 +129,29 @@ footer::before {
             font-family: 'Merriweather', serif;
             font-size: 30px;
             font-weight: 700;
-            color: #ffffff;
+            color: black;
             margin-bottom: 2rem;
         }
 
         header,
         h2 {
             font-family: 'Merriweather', serif;
-            color: #ffffff;
+            color: black;
             font-size: 50px;
         }
 
         #h1 a {
             text-decoration: none;
-            color: #ffffff;
+            color: black;
             transition: color 0.3s ease-in-out;
         }
 
-        #h1 a:hover {
-            color: #dee0e7;
-        }
 
         .intro {
-            text-align: left;
-            margin-left: 1000px;
-            margin-right: 1000px;
-        }
+    text-align: left;
+    margin-left: 20px;  /* Reduced margin */
+    margin-right: 20px;  /* Reduced margin */
+}
 
         /* Media Queries */
         @media screen and (max-width: 768px) {
@@ -179,14 +167,16 @@ footer::before {
 
         th,
         td {
-            border: 2px solid #1b1d1e;
+            border: 2px solid white;
             font-size: 20px;
             margin: 30px;
             padding: 4px;
-            color: white;
+            color: black;
             margin-right: 40px; /* Added wider margin between columns */
             padding-left: 20px; /* Added padding to create spacing */
-            padding-right: 20px; /* Added padding to create spacing */
+            padding-right: 30px; /* Added padding to create spacing */
+            padding-top: 10px;    /* Adds padding to the top of each table cell */
+            padding-bottom: 10px; /* Adds padding to the bottom of each table cell */
             transition: background-color 0.3s ease-in-out; /* Added transition effect */
         }
 
@@ -196,14 +186,14 @@ footer::before {
 
         th a,
         td a {
-            color: white; /* Set the text color to white */
+            color: black; /* Set the text color to white */
             text-decoration: none; /* Remove underline */
         }
 
 
         th a:hover,
         td a:hover {
-            color: #dee0e7;
+            color: rgb(113, 113, 113);
         }
 
 
@@ -211,6 +201,12 @@ footer::before {
       position: relative;
       display: inline-block;
     }
+
+    tr {
+    padding-top: 10px;    /* Adds padding to the top of each table row */
+    padding-bottom: 10px; /* Adds padding to the bottom of each table row */
+}
+
 
     .dropdown-content {
       display: none;
@@ -235,37 +231,8 @@ footer::before {
     .dropdown-content a:hover {
       background-color: #f1f1f1;
     }
-   
-   .card-header {
-  background-color: #424547;
-  color: white;
-  text-decoration: none;
-  border: none; /* Remove the border */
-    outline: none;
-}
-
-.card {
-    border: none; /* Remove the border */
-    margin-bottom: 10px;
-  }
-
-  .card-header button {
-  color: white;
-  text-decoration: none;
-}
-
-.card-body {
-  background-color: #1b1d1e;
-}
-
-.accordian {
-  border: none; /* Remove the border */
-}
-hr {
-  background-color: white;
-}
   p {
-    color: white;
+    color: black;
 }
   </style>
   <script>

@@ -8,237 +8,228 @@
     <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
     <title>Global Talent Network</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
 
-        body {
-            font-family: 'Comfortaa', cursive;
-            background-color: #1b1d1e;
-            margin: 0;
-            margin: 40px;
-            padding: 0;
-            overflow: auto;
-        }
+      body, html {
+height: 100%;
+margin: 0;
+padding: 0;
+font-family: 'Comfortaa', cursive;
+background-color: white;
+}
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+.container {
+display: flex;
+flex-direction: column;
+min-height: 100vh; /* use vh units to fill full view height */
+}
 
-        p {
-            font-family: 'Comfortaa', cursive;
-            color: white;
-        }
+.content {
+flex-grow: 1; /* allows this container to grow and push the footer to the bottom */
+padding: 2rem;
+margin-left: 20%;
+}
 
-        .content {
-            flex: 1;
-            padding: 2rem;
-            margin-left: 20%;
-        }
+    #header {
+        background-color: #1b1d1e;
+        padding: 40px;
+        margin: 0;
+        width: 100%;
+        color: black;
+        background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+        background-size: contain;
+        background-repeat: repeat;
+    }
 
-        .centered-heading {
-            font-family: 'Merriweather', serif;
-            margin: 0;
-            padding: 0;
-            overflow: auto;
-            text-align: center;
-            font-weight: 700;
-            font-size: 50px;
-            color: white; /* Set the text color to white */
-        }
 
-        .centered-image {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
 
-        #header {
-            background-color: #1b1d1e;
-            padding: 2rem;
-            color: #ffffff;
-        }
-
-        .top-left-corner {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            z-index: 1;
-        }
-
-        #menu {
-            font-family: 'Comfortaa', cursive;
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        #menu a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #ffffff;
-            transition: color 0.3s ease-in-out;
-        }
-
-        #menu a:hover {
-            color: #dee0e7;
-        }
-
-   footer {
- position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.2em 2em;
-  box-sizing: border-box;
+.centered-heading {
+  font-family: 'Merriweather', serif;
   margin: 0;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
-  background-size: contain;
-  background-repeat: repeat;
-  line-height: 1.2;
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+}
+
+      .centered-image {
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+      }
+
+
+      .top-left-corner {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          z-index: 1;
+      }
+
+      #menu {
+          font-family: 'Comfortaa', cursive;
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+          color: #ffffff;
+          font-size: 1.2rem;
+          font-weight: 700;
+      }
+
+      #menu a {
+          margin: 0 1rem;
+          text-decoration: none;
+          color: #ffffff;
+          transition: color 0.3s ease-in-out;
+      }
+
+      #menu a:hover {
+          color: #dee0e7;
+      }
+
+      footer {
+background-color: black;
+color: white;
+padding: 1em 2em;
+}
+
+footer b, footer a {
+font-size: 10px;
+font-weight: 600;
+color: white;
+text-decoration: none;
 }
 
 footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10%;
-  height: 120%; /* Adjust the height to leave space for the text */
-  background-color: rgba(255, 255, 255, 0.4); /* Change the opacity to your liking */
-  z-index: -1;
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 10%;
+height: 120%; /* Adjust the height to leave space for the text */
+background-color: black(255, 255, 255, 0.4); /* Change the opacity to your liking */
+z-index: -1;
 }
 
-   footer b {
-      font-size: 10px;
-      font-weight: 600;
-      margin-top: auto;
-  }
-
-  footer a {
-      color: rgb(0, 0, 0);
-      font-size: 10px;
-      font-weight: 600;
-  }
-
-        #main {
-            margin-left: 28px; /* Adjust this value to move the content further to the right */
-        }
-
-        header,
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 30px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 2rem;
-        }
-
-        header,
-        h2 {
-            font-family: 'Merriweather', serif;
-            color: #ffffff;
-            font-size: 50px;
-        }
-
-        #h1 a {
-            text-decoration: none;
-            color: #ffffff;
-            transition: color 0.3s ease-in-out;
-        }
-
-        #h1 a:hover {
-            color: #dee0e7;
-        }
-
-        .intro {
-            text-align: left;
-            margin-left: 1000px;
-            margin-right: 1000px;
-        }
-
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            .centered-heading {
-                font-size: 1.8rem;
-            }
-
-            header,
-            h1 {
-                font-size: 50px;
-            }
-        }
-
-        th,
-        td {
-            border: 2px solid #1b1d1e;
-            font-size: 20px;
-            margin: 30px;
-            padding: 4px;
-            color: #ffffff;
-            margin-right: 40px; /* Added wider margin between columns */
-            padding-left: 20px; /* Added padding to create spacing */
-            padding-right: 20px; /* Added padding to create spacing */
-            transition: background-color 0.3s ease-in-out; /* Added transition effect */
-        }
-
-        th a {
-          font-size: 30px; /* Increased font size for column titles */
-        }
-
-        th a,
-        td a {
-            color: white; /* Set the text color to white */
-            text-decoration: none; /* Remove underline */
-        }
 
 
-        th a:hover,
-        td a:hover {
-            color: #dee0e7;
-        }
+      #main {
+          margin-left: 28px; /* Adjust this value to move the content further to the right */
+      }
+
+      header,
+      h1 {
+          font-family: 'Merriweather', serif;
+          font-size: 30px;
+          font-weight: 700;
+          color: black;
+          margin-bottom: 2rem;
+      }
+
+      header,
+      h2 {
+          font-family: 'Merriweather', serif;
+          color: black;
+          font-size: 50px;
+      }
+
+      #h1 a {
+          text-decoration: none;
+          color: black;
+          transition: color 0.3s ease-in-out;
+      }
 
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      color: black !important;
-      padding: 8px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-  p {
-    color: white;
+      .intro {
+  text-align: left;
+  margin-left: 20px;  /* Reduced margin */
+  margin-right: 20px;  /* Reduced margin */
 }
-  </style>
+
+      /* Media Queries */
+      @media screen and (max-width: 768px) {
+          .centered-heading {
+              font-size: 1.8rem;
+          }
+
+          header,
+          h1 {
+              font-size: 50px;
+          }
+      }
+
+      th,
+      td {
+          border: 2px solid white;
+          font-size: 20px;
+          margin: 30px;
+          padding: 4px;
+          color: black;
+          margin-right: 40px; /* Added wider margin between columns */
+          padding-left: 20px; /* Added padding to create spacing */
+          padding-right: 30px; /* Added padding to create spacing */
+          padding-top: 10px;    /* Adds padding to the top of each table cell */
+          padding-bottom: 10px; /* Adds padding to the bottom of each table cell */
+          transition: background-color 0.3s ease-in-out; /* Added transition effect */
+      }
+
+      th a {
+        font-size: 30px; /* Increased font size for column titles */
+      }
+
+      th a,
+      td a {
+          color: black; /* Set the text color to white */
+          text-decoration: none; /* Remove underline */
+      }
+
+
+      th a:hover,
+      td a:hover {
+          color: rgb(113, 113, 113);
+      }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  tr {
+  padding-top: 10px;    /* Adds padding to the top of each table row */
+  padding-bottom: 10px; /* Adds padding to the bottom of each table row */
+}
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: black !important;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+p {
+  color: black;
+}
+</style>
 </head>
 <body>
   <div id="header">
