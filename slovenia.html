@@ -11,7 +11,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
 
-      body, html {
+   body, html {
 height: 100%;
 margin: 0;
 padding: 0;
@@ -20,15 +20,9 @@ background-color: white;
 }
 
 .container {
-display: flex;
-flex-direction: column;
-min-height: 100vh; /* use vh units to fill full view height */
-}
-
-.content {
-flex-grow: 1; /* allows this container to grow and push the footer to the bottom */
-padding: 2rem;
-margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% of the viewport height */
 }
 
     #header {
@@ -89,7 +83,13 @@ margin-left: 20%;
           color: #dee0e7;
       }
 
-      footer {
+      #main {
+  flex: 1 0 auto; /* flex-grow, flex-shrink, flex-basis; allows this container to grow and/or shrink */
+  margin-left: 28px;
+}
+
+footer {
+  flex-shrink: 0; /* prevents the footer from shrinking */
 background-color: black;
 color: white;
 padding: 1em 2em;
@@ -114,10 +114,6 @@ z-index: -1;
 }
 
 
-
-      #main {
-          margin-left: 28px; /* Adjust this value to move the content further to the right */
-      }
 
       header,
       h1 {
@@ -232,6 +228,7 @@ p {
 </style>
 </head>
 <body>
+  <div class = "container">
   <div id="header" style="margin: 0px;">
     <div id="h1">
       <h1 class="centered-heading">

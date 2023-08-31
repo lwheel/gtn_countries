@@ -315,6 +315,7 @@ hr {{
 </script>
 </head>
 <body>
+  <div class = "container">
   <div id="header" style="margin: 0px;">
     <div id="h1">
       <h1 class="centered-heading">

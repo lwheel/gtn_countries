@@ -16,225 +16,221 @@
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
 
-        body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Comfortaa', cursive;
-  background-color: white;
+  body, html {
+height: 100%;
+margin: 0;
+padding: 0;
+font-family: 'Comfortaa', cursive;
+background-color: white;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* use vh units to fill full view height */
+  min-height: 100vh; /* 100% of the viewport height */
 }
 
-.content {
-  flex-grow: 1; /* allows this container to grow and push the footer to the bottom */
-  padding: 2rem;
-  margin-left: 20%;
-}
-
-      #header {
-          background-color: #1b1d1e;
-          padding: 40px;
-          margin: 0;
-          width: 100%;
-          color: black;
-          background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
-          background-size: contain;
-          background-repeat: repeat;
-      }
+    #header {
+        background-color: #1b1d1e;
+        padding: 40px;
+        margin: 0;
+        width: 100%;
+        color: black;
+        background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+        background-size: contain;
+        background-repeat: repeat;
+    }
 
 
 
 .centered-heading {
-    font-family: 'Merriweather', serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-weight: 700;
-    font-size: 50px;
-    color: black;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
 }
 
-        .centered-image {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
+      .centered-image {
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+      }
 
 
-        .top-left-corner {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            z-index: 1;
-        }
+      .top-left-corner {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          z-index: 1;
+      }
 
-        #menu {
-            font-family: 'Comfortaa', cursive;
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
+      #menu {
+          font-family: 'Comfortaa', cursive;
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+          color: #ffffff;
+          font-size: 1.2rem;
+          font-weight: 700;
+      }
 
-        #menu a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #ffffff;
-            transition: color 0.3s ease-in-out;
-        }
+      #menu a {
+          margin: 0 1rem;
+          text-decoration: none;
+          color: #ffffff;
+          transition: color 0.3s ease-in-out;
+      }
 
-        #menu a:hover {
-            color: #dee0e7;
-        }
+      #menu a:hover {
+          color: #dee0e7;
+      }
 
-        footer {
-  background-color: black;
-  color: white;
-  padding: 1em 2em;
+      #main {
+  flex: 1 0 auto; /* flex-grow, flex-shrink, flex-basis; allows this container to grow and/or shrink */
+  margin-left: 28px;
+}
+
+footer {
+  flex-shrink: 0; /* prevents the footer from shrinking */
+background-color: black;
+color: white;
+padding: 1em 2em;
 }
 
 footer b, footer a {
-  font-size: 10px;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
+font-size: 10px;
+font-weight: 600;
+color: white;
+text-decoration: none;
 }
 
 footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10%;
-  height: 120%; /* Adjust the height to leave space for the text */
-  background-color: black(255, 255, 255, 0.4); /* Change the opacity to your liking */
-  z-index: -1;
-}
-
-  
-
-        #main {
-            margin-left: 28px; /* Adjust this value to move the content further to the right */
-        }
-
-        header,
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 30px;
-            font-weight: 700;
-            color: black;
-            margin-bottom: 2rem;
-        }
-
-        header,
-        h2 {
-            font-family: 'Merriweather', serif;
-            color: black;
-            font-size: 50px;
-        }
-
-        #h1 a {
-            text-decoration: none;
-            color: black;
-            transition: color 0.3s ease-in-out;
-        }
-
-
-        .intro {
-    text-align: left;
-    margin-left: 20px;  /* Reduced margin */
-    margin-right: 20px;  /* Reduced margin */
-}
-
-        /* Media Queries */
-        @media screen and (max-width: 768px) {
-            .centered-heading {
-                font-size: 1.8rem;
-            }
-
-            header,
-            h1 {
-                font-size: 50px;
-            }
-        }
-
-        th,
-        td {
-            border: 2px solid white;
-            font-size: 20px;
-            margin: 30px;
-            padding: 4px;
-            color: black;
-            margin-right: 40px; /* Added wider margin between columns */
-            padding-left: 20px; /* Added padding to create spacing */
-            padding-right: 30px; /* Added padding to create spacing */
-            padding-top: 10px;    /* Adds padding to the top of each table cell */
-            padding-bottom: 10px; /* Adds padding to the bottom of each table cell */
-            transition: background-color 0.3s ease-in-out; /* Added transition effect */
-        }
-
-        th a {
-          font-size: 30px; /* Increased font size for column titles */
-        }
-
-        th a,
-        td a {
-            color: black; /* Set the text color to white */
-            text-decoration: none; /* Remove underline */
-        }
-
-
-        th a:hover,
-        td a:hover {
-            color: rgb(113, 113, 113);
-        }
-
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    tr {
-    padding-top: 10px;    /* Adds padding to the top of each table row */
-    padding-bottom: 10px; /* Adds padding to the bottom of each table row */
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 10%;
+height: 120%; /* Adjust the height to leave space for the text */
+background-color: black(255, 255, 255, 0.4); /* Change the opacity to your liking */
+z-index: -1;
 }
 
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+      header,
+      h1 {
+          font-family: 'Merriweather', serif;
+          font-size: 30px;
+          font-weight: 700;
+          color: black;
+          margin-bottom: 2rem;
+      }
 
-    .dropdown-content a {
-      color: black !important;
-      padding: 8px 16px;
-      text-decoration: none;
-      display: block;
-    }
+      header,
+      h2 {
+          font-family: 'Merriweather', serif;
+          color: black;
+          font-size: 50px;
+      }
 
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-  p {
-    color: black;
+      #h1 a {
+          text-decoration: none;
+          color: black;
+          transition: color 0.3s ease-in-out;
+      }
+
+
+      .intro {
+  text-align: left;
+  margin-left: 20px;  /* Reduced margin */
+  margin-right: 20px;  /* Reduced margin */
 }
-  </style>
+
+      /* Media Queries */
+      @media screen and (max-width: 768px) {
+          .centered-heading {
+              font-size: 1.8rem;
+          }
+
+          header,
+          h1 {
+              font-size: 50px;
+          }
+      }
+
+      th,
+      td {
+          border: 2px solid white;
+          font-size: 20px;
+          margin: 30px;
+          padding: 4px;
+          color: black;
+          margin-right: 40px; /* Added wider margin between columns */
+          padding-left: 20px; /* Added padding to create spacing */
+          padding-right: 30px; /* Added padding to create spacing */
+          padding-top: 10px;    /* Adds padding to the top of each table cell */
+          padding-bottom: 10px; /* Adds padding to the bottom of each table cell */
+          transition: background-color 0.3s ease-in-out; /* Added transition effect */
+      }
+
+      th a {
+        font-size: 30px; /* Increased font size for column titles */
+      }
+
+      th a,
+      td a {
+          color: black; /* Set the text color to white */
+          text-decoration: none; /* Remove underline */
+      }
+
+
+      th a:hover,
+      td a:hover {
+          color: rgb(113, 113, 113);
+      }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  tr {
+  padding-top: 10px;    /* Adds padding to the top of each table row */
+  padding-bottom: 10px; /* Adds padding to the bottom of each table row */
+}
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: black !important;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+p {
+  color: black;
+}
+</style>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
     var accordion = document.getElementById("accordion");
@@ -263,6 +259,7 @@ footer::before {
 </script>
 </head>
 <body>
+  <div class = "container">
   <div id="header" style="margin: 0px;">
     <div id="h1">
       <h1 class="centered-heading">
