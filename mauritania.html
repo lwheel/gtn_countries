@@ -2,33 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
     <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
     <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
     <title>Global Talent Network</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
 
-        * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#header, footer {
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;  /* for troubleshooting, remove if not needed */
-}
-
-        body, html {
+      body, html {
 height: 100%;
 margin: 0;
 padding: 0;
@@ -40,13 +24,30 @@ background-color: white;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* 100% of the viewport height */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+}
+.container-fluid, .container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.row {
+  margin: 0;
+}
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-sm, .col-md, .col-lg, .col-xl {
+  padding: 0;
 }
 
     #header {
         background-color: #1b1d1e;
         padding: 40px;
         margin: 0;
-        width: 100%;
+        width: 100% !important;
         color: black;
         background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
         background-size: contain;
@@ -106,11 +107,10 @@ background-color: white;
 }
 
 footer {
-  flex-shrink: 0;
-  background-color: black;
-  color: white;
-  padding: 1em 2em;
-  width: 100%;  /* Add this line */
+  flex-shrink: 0; /* prevents the footer from shrinking */
+background-color: black;
+color: white;
+padding: 1em 2em;
 }
 
 footer b, footer a {
@@ -244,34 +244,11 @@ p {
   color: black;
 }
 </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var accordion = document.getElementById("accordion");
-    var buttons = accordion.getElementsByClassName("btn");
-    var contents = accordion.getElementsByClassName("collapse");
-
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener("click", function() {
-        var content = this.nextElementSibling;
-        var isCollapsed = content.classList.contains("show");
-
-        if (isCollapsed) {
-            content.classList.remove("show");
-        } else {
-            content.classList.add("show");
-        }
-        });
-
-        // Close the content panels by default
-        contents[i].classList.remove("show");
-    }
-    });
-
-
-
-</script>
 </head>
 <body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <div class = "container">
   <div id="header">
     <div id="h1">

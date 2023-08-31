@@ -1,267 +1,255 @@
 <!DOCTYPE html>
-                    <html xmlns="http://www.w3.org/1999/xhtml">
-                    <head>
-                        <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-                        <link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" />
-                        <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
-                        <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
-                        <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
-                        <title>Global Talent Network</title>
-                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-                        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-                        <style>
-                          @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-                          @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
-                  
-                          body, html {
-                    height: 100%;
-                    margin: 0;
-                    padding: 0;
-                    font-family: 'Comfortaa', cursive;
-                    background-color: white;
-                  }
-                  
-                  .container {
-                    display: flex;
-                    flex-direction: column;
-                    min-height: 100vh; /* use vh units to fill full view height */
-                  }
-                  
-                  .content {
-                    flex-grow: 1; /* allows this container to grow and push the footer to the bottom */
-                    padding: 2rem;
-                    margin-left: 20%;
-                  }
-                  
-                        #header {
-                            background-color: #1b1d1e;
-                            padding: 40px;
-                            margin: 0;
-                            width: 100%;
-                            color: black;
-                            background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
-                            background-size: contain;
-                            background-repeat: repeat;
-                        }
-                  
-                  
-                  
-                  .centered-heading {
-                      font-family: 'Merriweather', serif;
-                      margin: 0;
-                      padding: 0;
-                      text-align: center;
-                      font-weight: 700;
-                      font-size: 50px;
-                      color: black;
-                  }
-                  
-                          .centered-image {
-                              display: flex;
-                              justify-content: center;
-                              margin-top: 1rem;
-                          }
-                  
-                  
-                          .top-left-corner {
-                              position: absolute;
-                              top: 12px;
-                              left: 12px;
-                              z-index: 1;
-                          }
-                  
-                          #menu {
-                              font-family: 'Comfortaa', cursive;
-                              display: flex;
-                              justify-content: center;
-                              margin-top: 1rem;
-                              color: #ffffff;
-                              font-size: 1.2rem;
-                              font-weight: 700;
-                          }
-                  
-                          #menu a {
-                              margin: 0 1rem;
-                              text-decoration: none;
-                              color: #ffffff;
-                              transition: color 0.3s ease-in-out;
-                          }
-                  
-                          #menu a:hover {
-                              color: #dee0e7;
-                          }
-                  
-                          footer {
-                    background-color: black;
-                    color: white;
-                    padding: 1em 2em;
-                  }
-                  
-                  footer b, footer a {
-                    font-size: 10px;
-                    font-weight: 600;
-                    color: white;
-                    text-decoration: none;
-                  }
-                  
-                  footer::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 10%;
-                    height: 120%; /* Adjust the height to leave space for the text */
-                    background-color: black(255, 255, 255, 0.4); /* Change the opacity to your liking */
-                    z-index: -1;
-                  }
-                  
-                    
-                  
-                          #main {
-                              margin-left: 28px; /* Adjust this value to move the content further to the right */
-                          }
-                  
-                          header,
-                          h1 {
-                              font-family: 'Merriweather', serif;
-                              font-size: 30px;
-                              font-weight: 700;
-                              color: black;
-                              margin-bottom: 2rem;
-                          }
-                  
-                          header,
-                          h2 {
-                              font-family: 'Merriweather', serif;
-                              color: black;
-                              font-size: 50px;
-                          }
-                  
-                          #h1 a {
-                              text-decoration: none;
-                              color: black;
-                              transition: color 0.3s ease-in-out;
-                          }
-                  
-                  
-                          .intro {
-                      text-align: left;
-                      margin-left: 20px;  /* Reduced margin */
-                      margin-right: 20px;  /* Reduced margin */
-                  }
-                  
-                          /* Media Queries */
-                          @media screen and (max-width: 768px) {
-                              .centered-heading {
-                                  font-size: 1.8rem;
-                              }
-                  
-                              header,
-                              h1 {
-                                  font-size: 50px;
-                              }
-                          }
-                  
-                          th,
-                          td {
-                              border: 2px solid white;
-                              font-size: 20px;
-                              margin: 30px;
-                              padding: 4px;
-                              color: black;
-                              margin-right: 40px; /* Added wider margin between columns */
-                              padding-left: 20px; /* Added padding to create spacing */
-                              padding-right: 30px; /* Added padding to create spacing */
-                              padding-top: 10px;    /* Adds padding to the top of each table cell */
-                              padding-bottom: 10px; /* Adds padding to the bottom of each table cell */
-                              transition: background-color 0.3s ease-in-out; /* Added transition effect */
-                          }
-                  
-                          th a {
-                            font-size: 30px; /* Increased font size for column titles */
-                          }
-                  
-                          th a,
-                          td a {
-                              color: black; /* Set the text color to white */
-                              text-decoration: none; /* Remove underline */
-                          }
-                  
-                  
-                          th a:hover,
-                          td a:hover {
-                              color: rgb(113, 113, 113);
-                          }
-                  
-                  
-                      .dropdown {
-                        position: relative;
-                        display: inline-block;
-                      }
-                  
-                      tr {
-                      padding-top: 10px;    /* Adds padding to the top of each table row */
-                      padding-bottom: 10px; /* Adds padding to the bottom of each table row */
-                  }
-                  
-                  
-                      .dropdown-content {
-                        display: none;
-                        position: absolute;
-                        background-color: #f9f9f9;
-                        min-width: 160px;
-                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                        z-index: 1;
-                      }
-                  
-                      .dropdown:hover .dropdown-content {
-                        display: block;
-                      }
-                  
-                      .dropdown-content a {
-                        color: black !important;
-                        padding: 8px 16px;
-                        text-decoration: none;
-                        display: block;
-                      }
-                  
-                      .dropdown-content a:hover {
-                        background-color: #f1f1f1;
-                      }
-                    p {
-                      color: black;
-                  }
-                    </style>
-                      <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                        var accordion = document.getElementById("accordion");
-                        var buttons = accordion.getElementsByClassName("btn");
-                        var contents = accordion.getElementsByClassName("collapse");
-                    
-                        for (var i = 0; i < buttons.length; i++) {
-                            buttons[i].addEventListener("click", function() {
-                            var content = this.nextElementSibling;
-                            var isCollapsed = content.classList.contains("show");
-                    
-                            if (isCollapsed) {
-                                content.classList.remove("show");
-                            } else {
-                                content.classList.add("show");
-                            }
-                            });
-                    
-                            // Close the content panels by default
-                            contents[i].classList.remove("show");
-                        }
-                        });
-                    
-                    
-                    
-                    </script>
-                    </head>
-                    <body>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
+    <title>Global Talent Network</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
+
+      body, html {
+height: 100%;
+margin: 0;
+padding: 0;
+font-family: 'Comfortaa', cursive;
+background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% of the viewport height */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+}
+.container-fluid, .container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.row {
+  margin: 0;
+}
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-sm, .col-md, .col-lg, .col-xl {
+  padding: 0;
+}
+
+    #header {
+        background-color: #1b1d1e;
+        padding: 40px;
+        margin: 0;
+        width: 100% !important;
+        color: black;
+        background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+
+
+.centered-heading {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+}
+
+      .centered-image {
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+      }
+
+
+      .top-left-corner {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          z-index: 1;
+      }
+
+      #menu {
+          font-family: 'Comfortaa', cursive;
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+          color: #ffffff;
+          font-size: 1.2rem;
+          font-weight: 700;
+      }
+
+      #menu a {
+          margin: 0 1rem;
+          text-decoration: none;
+          color: #ffffff;
+          transition: color 0.3s ease-in-out;
+      }
+
+      #menu a:hover {
+          color: #dee0e7;
+      }
+
+      #main {
+  flex: 1 0 auto; /* flex-grow, flex-shrink, flex-basis; allows this container to grow and/or shrink */
+  margin-left: 28px;
+}
+
+footer {
+  flex-shrink: 0; /* prevents the footer from shrinking */
+background-color: black;
+color: white;
+padding: 1em 2em;
+}
+
+footer b, footer a {
+font-size: 10px;
+font-weight: 600;
+color: white;
+text-decoration: none;
+}
+
+footer::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 10%;
+height: 120%; /* Adjust the height to leave space for the text */
+background-color: black(255, 255, 255, 0.4); /* Change the opacity to your liking */
+z-index: -1;
+}
+
+
+
+      header,
+      h1 {
+          font-family: 'Merriweather', serif;
+          font-size: 30px;
+          font-weight: 700;
+          color: black;
+          margin-bottom: 2rem;
+      }
+
+      header,
+      h2 {
+          font-family: 'Merriweather', serif;
+          color: black;
+          font-size: 50px;
+      }
+
+      #h1 a {
+          text-decoration: none;
+          color: black;
+          transition: color 0.3s ease-in-out;
+      }
+
+
+      .intro {
+  text-align: left;
+  margin-left: 20px;  /* Reduced margin */
+  margin-right: 20px;  /* Reduced margin */
+}
+
+      /* Media Queries */
+      @media screen and (max-width: 768px) {
+          .centered-heading {
+              font-size: 1.8rem;
+          }
+
+          header,
+          h1 {
+              font-size: 50px;
+          }
+      }
+
+      th,
+      td {
+          border: 2px solid white;
+          font-size: 20px;
+          margin: 30px;
+          padding: 4px;
+          color: black;
+          margin-right: 40px; /* Added wider margin between columns */
+          padding-left: 20px; /* Added padding to create spacing */
+          padding-right: 30px; /* Added padding to create spacing */
+          padding-top: 10px;    /* Adds padding to the top of each table cell */
+          padding-bottom: 10px; /* Adds padding to the bottom of each table cell */
+          transition: background-color 0.3s ease-in-out; /* Added transition effect */
+      }
+
+      th a {
+        font-size: 30px; /* Increased font size for column titles */
+      }
+
+      th a,
+      td a {
+          color: black; /* Set the text color to white */
+          text-decoration: none; /* Remove underline */
+      }
+
+
+      th a:hover,
+      td a:hover {
+          color: rgb(113, 113, 113);
+      }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  tr {
+  padding-top: 10px;    /* Adds padding to the top of each table row */
+  padding-bottom: 10px; /* Adds padding to the bottom of each table row */
+}
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: black !important;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+p {
+  color: black;
+}
+</style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <div class = "container">
                       <div id="header">
                         <div id="h1">
                           <h1 class="centered-heading">
