@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
     <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
@@ -15,7 +16,19 @@
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
 
-  body, html {
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header, footer {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;  /* for troubleshooting, remove if not needed */
+}
+
+        body, html {
 height: 100%;
 margin: 0;
 padding: 0;
