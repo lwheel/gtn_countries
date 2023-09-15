@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link href="App_Themes/fav-logo.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
+    <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
+    <link rel="stylesheet" href="./dist/css/jsvectormap.css" />
+    <script src="./dist/js/jsvectormap.min.js"></script>  
+    <script src="./dist/maps/world.js"></script>
+    <script src="./dist/maps/world-merc.js"></script>  
+    <title>Global Talent Network</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
+
+  body, html {
+height: 100%;
+margin: 0;
+padding: 0;
+font-family: 'Comfortaa', cursive;
+background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% of the viewport height */
+}
+
+    #header {
+        padding: 40px;
+        margin: 0;
+        width: 100%;
+        color: white;  /* You can also try with black or any other high contrast color */
+      text-shadow: 
+        2px 2px 8px black,  /* Increase blur for darker shadow */
+        -2px -2px 8px black; /* Multiple shadows for more intensity */
+        background-image: url('https://lwheel.github.io/FILESMO/repeat1.png');
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+
+.centered-heading {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  color: white;  /* You can also try with black or any other high contrast color */
+  text-shadow: 
+        2px 2px 8px black,  /* Increase blur for darker shadow */
+        2px -2px 8px black;   /* Adding shadow for additional contrast */
+}
+
+      .centered-image {
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+      }
+
+
+      .top-left-corner {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+          z-index: 1;
+      }
+
+      #menu {
+          font-family: 'Comfortaa', cursive;
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+          color: #ffffff;
+          font-size: 1.2rem;
+          font-weight: 700;
+      }
+
+      #menu a {
+          margin: 0 1rem;
+          text-decoration: none;
+          color: #ffffff;
+          transition: color 0.3s ease-in-out;
+      }
+
+      #menu a:hover {
+          color: #dee0e7;
+      }
+
+      #main {
+  flex: 1 0 auto; /* flex-grow, flex-shrink, flex-basis; allows this container to grow and/or shrink */
+  margin-left: 28px;
+}
+
+footer {
+  flex-shrink: 0; /* prevents the footer from shrinking */
+background-color: black;
+color: white;
+padding: 1em 2em;
+}
+
+footer b, footer a {
+font-size: 10px;
+font-weight: 600;
+color: white;
+text-decoration: none;
+}
+
+footer::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 10%;
+height: 120%; /* Adjust the height to leave space for the text */
+background-color: black(255, 255, 255, 0.4); /* Change the opacity to your liking */
+z-index: -1;
+}
+
+
+
+      header,
+      h1 {
+          font-family: 'Merriweather', serif;
+          font-size: 30px;
+          font-weight: 700;
+          color: white;  /* You can also try with black or any other high contrast color */
+      text-shadow: 
+        2px 2px 8px black,  /* Increase blur for darker shadow */
+        -2px -2px 8px black; /* Multiple shadows for more intensity */
+          margin-bottom: 2rem;
+      }
+
+      header,
+      h2 {
+          font-family: 'Merriweather', serif;
+          color: black;  /* You can also try with black or any other high contrast color */  /* Adding shadow for additional contrast */
+          font-size: 50px;
+      }
+
+      #h1 a {
+          text-decoration: none;
+          transition: color 0.3s ease-in-out;
+      }
+
+
+      .intro {
+  text-align: left;
+  margin-left: 20px;  /* Reduced margin */
+  margin-right: 20px;  /* Reduced margin */
+}
+
+      /* Media Queries */
+      @media screen and (max-width: 768px) {
+          .centered-heading {
+              font-size: 1.8rem;
+          }
+
+          header,
+          h1 {
+              font-size: 50px;
+          }
+      }
+
+      th,
+      td {
+          border: 2px solid white;
+          font-size: 20px;
+          margin: 30px;
+          padding: 4px;
+          color: black;
+          margin-right: 40px; /* Added wider margin between columns */
+          padding-left: 20px; /* Added padding to create spacing */
+          padding-right: 30px; /* Added padding to create spacing */
+          padding-top: 10px;    /* Adds padding to the top of each table cell */
+          padding-bottom: 10px; /* Adds padding to the bottom of each table cell */
+          transition: background-color 0.3s ease-in-out; /* Added transition effect */
+      }
+
+      th a {
+        font-size: 30px; /* Increased font size for column titles */
+      }
+
+      th a,
+      td a {
+          color: black; /* Set the text color to white */
+          text-decoration: none; /* Remove underline */
+      }
+
+
+      th a:hover,
+      td a:hover {
+          color: rgb(113, 113, 113);
+      }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  tr {
+  padding-top: 10px;    /* Adds padding to the top of each table row */
+  padding-bottom: 10px; /* Adds padding to the bottom of each table row */
+}
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: black !important;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+p {
+  color: black;
+}
+.country{
+  color: #6ea4ec;
+}
+.country a {
+    color: inherit;
+}
+
+</style>
+<script>
+     $(document).ready(function() {
+        var map = new JsVectorMap({
+  map: 'world',
+  backgroundColor: 'transparent',
+  draggable: true,
+  zoomButtons: true,
+  zoomOnScroll: true,
+  zoomOnScrollSpeed: 3,
+  zoomMax: 12,
+  zoomMin: 1,
+  zoomAnimate: true,
+  showTooltip: true,
+  zoomStep: 1.5,
+  bindTouchEvents: true,
+  lineStyle: {
+    stroke: '#808080',
+    strokeWidth: 1,
+    strokeLinecap: 'round'
+  },
+  focusOn: {},
+  markers: null,
+  markersSelectable: false,
+  markersSelectableOne: false,
+  markerStyle: {
+    initial: {
+      r: 7,
+      fill: '#374151',
+      fillOpacity: 1,
+      stroke: '#FFF',
+      strokeWidth: 5,
+      strokeOpacity: .5
+    },
+    hover: {
+      fill: '#3cc0ff',
+      cursor: 'pointer'
+    },
+    selected: {
+      fill: 'blue'
+    },
+    selectedHover: {}
+  },
+  markerLabelStyle: {
+    initial: {
+      fontFamily: 'Verdana',
+      fontSize: 12,
+      fontWeight: 500,
+      cursor: 'default',
+      fill: '#374151'
+    },
+    hover: {
+      cursor: 'pointer'
+    },
+    selected: {},
+    selectedHover: {}
+  },
+  labels: {
+    regions: {
+      render(code) {
+        return ['EG', 'KZ', 'CN'].indexOf(code) > -1 ? 'Hello ' + code : '';
+      },
+    }
+  },
+  regionsSelectable: false,
+  regionsSelectableOne: false,
+  regionStyle: {
+    initial: {
+      fill: '#e3eaef',
+      fillOpacity: 1,
+      stroke: 'none',
+      strokeWidth: 0,
+      strokeOpacity: 1
+    },
+    hover: {
+      fillOpacity: .7,
+      cursor: 'pointer'
+    },
+    selected: {
+      fill: '#000'
+    },
+    selectedHover: {}
+  },
+  regionLabelStyle: {
+    initial: {
+      fontFamily: 'Verdana',
+      fontSize: '12',
+      fontWeight: 'bold',
+      cursor: 'default',
+      fill: '#35373e'
+    },
+    hover: {
+      cursor: 'pointer'
+    }
+  },
+  series: {
+    markers: [],
+    regions: []
+  },
+  visualizeData: {
+    scale: ['#eeeeee', '#999999'],
+    values: {
+      EG: 29,
+      US: 100,
+      CA: 190,
+      BR: 75,
+      // ...
+    }
+  },
+  // New event handling parameters
+  onLoaded: function (map) {
+    window.addEventListener('resize', () => {
+      map.updateSize();
+    });
+  },
+  onViewportChange: function(scale, transX, transY) {
+    // Do something
+  },
+  onRegionClick: function(event, code) {
+    // Do something
+  },
+  onMarkerClick: function(event, markerIndex) {
+    // Do something
+  },
+  onRegionSelected: function(index, isSelected, selectedRegions) {
+    console.log(index, isSelected, selectedRegions);
+  },
+  onMarkerSelected: function(code, isSelected, selectedMarkers) {
+    console.log(code, isSelected, selectedMarkers);
+  },
+  onRegionTooltipShow: function(tooltip, code) {
+    if (code === 'RU') {
+      tooltip.selector.innerHTML = tooltip.text() + ' <b>(Hello Russia)</b>';
+    }
+  },
+  onMarkerTooltipShow: function(tooltip, index) {
+    tooltip.selector.innerHTML = '<h5 class="mb-0">'+tooltip.text()+'</h5>' + '<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p><small class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>';
+  }
+});
+
+     });
+</script>
+</head>
+<body>
+  <div class = "container">
+  <div id="header" style="margin: 0px;">
+    <div id="h1">
+      <h1 class="centered-heading">
+        <a href="https://www.globtalent.org/" style = "color: white">Global Talent Network</a>
+      </h1>
+    </div>
+    <div id="menu">
+      <a href="https://www.globtalent.org/">Home</a>  <span>&bull;</span>
+      <div class="dropdown">
+        <a href="index.html" >Partner Math Olympiads</a>
+        <div class="dropdown-content">
+          <a href="problems.html">Past Problems</a>
+          <a href="total_results.html">Results by Country</a>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<div id="main">
+    <h2 style="color: black;">Math Olympiad Index</h2>
+
+    <div id="map">
+    </div>
+</div>
+<br>
+</body>
+<footer>
+    <b style: color="white" margin="2 rem">E-mail:</b>
+    <a href="mailto:ea@globtalent.org" style: color="white" margin="2 rem">ea@globtalent.org</a>
+</footer>
+</div>
+</html>
