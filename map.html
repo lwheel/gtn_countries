@@ -242,15 +242,6 @@ p {
 
 </style>
 <script>
-    // Initialize the svgMap
-    window.onload = function() {
-        new svgMap({
-            targetElementID: 'svgMapExample',
-            data: svgMapDataGPD
-        });
-    };
-</script>
-<script>
     // Existing GDP Data
     var svgMapDataGPD = {
         data: {
@@ -289,6 +280,15 @@ p {
             width: 900,
             responsive: false
         }
+    };
+</script>
+<script>
+    // Initialize the svgMap
+    window.onload = function() {
+        new svgMap({
+            targetElementID: 'svgMapExample',
+            data: svgMapDataGPD
+        });
     };
 </script>
 </head>
