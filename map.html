@@ -6,10 +6,8 @@
     <link href="App_Themes/design.css" rel="stylesheet" type="text/css" />
     <link href="App_Themes/index.css" rel="stylesheet" type="text/css" />
     <link href="App_Themes/print.css" rel="stylesheet" type="text/css" media="print" />
-    <link rel="stylesheet" href="./node_modules/jsvectormap/dist/css/jsvectormap.css" />
-    <script src="./node_modules/jsvectormap/dist/js/jsvectormap.min.js"></script>  
-    <script src="./node_modules/jsvectormap/dist/maps/world.js"></script>
-    <script src="./node_modules/jsvectormap/dist/maps/world-merc.js"></script>  
+    <link href="/svgMap-master/dist/svgMap.css" rel="stylesheet">
+    <script src="/svgMap-master/dist/svgMap.js"></script>
     <title>Global Talent Network</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
@@ -243,148 +241,55 @@ p {
 }
 
 </style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <script>
-     $(document).ready(function() {
-        var map = new JsVectorMap({
-  map: 'world',
-  backgroundColor: 'transparent',
-  draggable: true,
-  zoomButtons: true,
-  zoomOnScroll: true,
-  zoomOnScrollSpeed: 3,
-  zoomMax: 12,
-  zoomMin: 1,
-  zoomAnimate: true,
-  showTooltip: true,
-  zoomStep: 1.5,
-  bindTouchEvents: true,
-  lineStyle: {
-    stroke: '#808080',
-    strokeWidth: 1,
-    strokeLinecap: 'round'
-  },
-  focusOn: {},
-  markers: null,
-  markersSelectable: false,
-  markersSelectableOne: false,
-  markerStyle: {
-    initial: {
-      r: 7,
-      fill: '#374151',
-      fillOpacity: 1,
-      stroke: '#FFF',
-      strokeWidth: 5,
-      strokeOpacity: .5
-    },
-    hover: {
-      fill: '#3cc0ff',
-      cursor: 'pointer'
-    },
-    selected: {
-      fill: 'blue'
-    },
-    selectedHover: {}
-  },
-  markerLabelStyle: {
-    initial: {
-      fontFamily: 'Verdana',
-      fontSize: 12,
-      fontWeight: 500,
-      cursor: 'default',
-      fill: '#374151'
-    },
-    hover: {
-      cursor: 'pointer'
-    },
-    selected: {},
-    selectedHover: {}
-  },
-  labels: {
-    regions: {
-      render(code) {
-        return ['EG', 'KZ', 'CN'].indexOf(code) > -1 ? 'Hello ' + code : '';
-      },
-    }
-  },
-  regionsSelectable: false,
-  regionsSelectableOne: false,
-  regionStyle: {
-    initial: {
-      fill: '#e3eaef',
-      fillOpacity: 1,
-      stroke: 'none',
-      strokeWidth: 0,
-      strokeOpacity: 1
-    },
-    hover: {
-      fillOpacity: .7,
-      cursor: 'pointer'
-    },
-    selected: {
-      fill: '#000'
-    },
-    selectedHover: {}
-  },
-  regionLabelStyle: {
-    initial: {
-      fontFamily: 'Verdana',
-      fontSize: '12',
-      fontWeight: 'bold',
-      cursor: 'default',
-      fill: '#35373e'
-    },
-    hover: {
-      cursor: 'pointer'
-    }
-  },
-  series: {
-    markers: [],
-    regions: []
-  },
-  visualizeData: {
-    scale: ['#eeeeee', '#999999'],
-    values: {
-      EG: 29,
-      US: 100,
-      CA: 190,
-      BR: 75,
-      // ...
-    }
-  },
-  // New event handling parameters
-  onLoaded: function (map) {
-    window.addEventListener('resize', () => {
-      map.updateSize();
-    });
-  },
-  onViewportChange: function(scale, transX, transY) {
-    // Do something
-  },
-  onRegionClick: function(event, code) {
-    // Do something
-  },
-  onMarkerClick: function(event, markerIndex) {
-    // Do something
-  },
-  onRegionSelected: function(index, isSelected, selectedRegions) {
-    console.log(index, isSelected, selectedRegions);
-  },
-  onMarkerSelected: function(code, isSelected, selectedMarkers) {
-    console.log(code, isSelected, selectedMarkers);
-  },
-  onRegionTooltipShow: function(tooltip, code) {
-    if (code === 'RU') {
-      tooltip.selector.innerHTML = tooltip.text() + ' <b>(Hello Russia)</b>';
-    }
-  },
-  onMarkerTooltipShow: function(tooltip, index) {
-    tooltip.selector.innerHTML = '<h5 class="mb-0">'+tooltip.text()+'</h5>' + '<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p><small class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>';
-  }
-});
-
-     });
+    // Initialize the svgMap
+    window.onload = function() {
+        new svgMap({
+            targetElementID: 'svgMapExample',
+            data: svgMapDataGPD
+        });
+    };
+</script>
+<script>
+    // Existing GDP Data
+    var svgMapDataGPD = {
+        data: {
+            gdp: {
+                name: 'GDP per capita',
+                format: '{0} USD',
+                thousandSeparator: ',',
+                thresholdMax: 50000,
+                thresholdMin: 1000
+            },
+            change: {
+                name: 'Change to year before',
+                format: '{0} %'
+            },
+            gdpAdjusted: {
+                name: 'Purchasing Power Parity',
+                format: '{0} USD',
+                thousandSeparator: ',',
+                thresholdMax: 50000,
+                thresholdMin: 1000
+            },
+            changeAdjusted: {
+                name: 'Change to year before',
+                format: '{0} %'
+            }
+        },
+        applyData: 'gdpAdjusted',
+        values: {
+            AF: {gdp: 587, change: 4.73, gdpAdjusted: 1958, changeAdjusted: 0.02},
+            link: 'https://cssscript.com',
+            linkTarget: '_blank'
+        },
+        // Insert your additional settings here
+        map: {
+            colors: { water: '#53acff', base: '#eef5ff' },
+            width: 900,
+            responsive: false
+        }
+    };
 </script>
 </head>
 <body>
@@ -411,7 +316,8 @@ p {
 <div id="main">
     <h2 style="color: black;">Math Olympiad Index</h2>
    
-    <div id="map" style="width: 600px; height: 400px;"></div>
+    <div id="svgMapExample">
+    </div>
 
 </div>
 <br>
