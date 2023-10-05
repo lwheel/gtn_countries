@@ -771,7 +771,7 @@ function svgMapWrapper(svgPanZoom) {
     this.mapWrapper.appendChild(this.mapImage);
 
 
-    // Add controls
+    /* Add controls
     var mapControlsWrapper = this.createElement(
       'div',
       'svgMap-map-controls-wrapper',
@@ -809,7 +809,7 @@ function svgMapWrapper(svgPanZoom) {
     // Add accessible names to zoom controls
     this.zoomControlIn.setAttribute('aria-label', 'Zoom in');
     this.zoomControlOut.setAttribute('aria-label', 'Zoom out');
-
+*/
     if (this.options.showContinentSelector) {
       // Add continent controls
       var mapContinentControlsWrapper = this.createElement(
