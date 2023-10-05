@@ -289,15 +289,32 @@ window.onload = function() {
         data: svgMapDataGPD
     });
     
-    // Attach event listeners
-    document.querySelectorAll("#svgMapExample path").forEach(function(countryPath) {
-        countryPath.addEventListener("click", function(event) {
-            // Assuming the country code is stored in an attribute "data-id"
+// Attach event listeners
+document.querySelectorAll("#svgMapExample path").forEach(function(countryPath) {
+    console.log('Adding click event listener for: ', countryPath);  // Debug: Log which countryPath is being processed
+
+    countryPath.addEventListener("click", function(event) {
+        console.log('Clicked on: ', event.currentTarget);  // Debug: Log the clicked element
+
+        // Attempt to get the country name from the "getCountryName" method
+        try {
             const countryCode = event.currentTarget.getCountryName("countryID");
-            // Navigate to the new HTML page
+            console.log('Country code retrieved: ', countryCode);  // Debug: Log the retrieved country code
+        } catch (error) {
+            console.error('Error in getting country code: ', error);  // Debug: Log any errors
+            return;
+        }
+
+        // Navigate to the new HTML page
+        try {
             window.location.href = countryCode + ".html";
-        });
+            console.log('Navigating to: ', countryCode + ".html");  // Debug: Log the navigation URL
+        } catch (error) {
+            console.error('Error in navigating: ', error);  // Debug: Log any errors
+        }
     });
+});
+
 };
 
 </script>
