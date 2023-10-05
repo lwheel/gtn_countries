@@ -283,17 +283,19 @@ p {
 </script>
 <script>
     console.log('Script loaded');
-    console.log('About to initialize svgMap');
-try {
-  new svgMap({
-    targetElementID: 'svgMapExample',
-    data: svgMapDataGPD
-  });
-  console.log('svgMap initialized');
-} catch (e) {
-  console.error('Failed to initialize svgMap:', e);
+
+    if (document.getElementById('svgMapExample')) {
+  console.log('svgMapExample exists');
+} else {
+  console.log('svgMapExample does not exist');
 }
 
+if (typeof svgPanZoom === 'undefined') {
+    console.error("svgPanZoom is not defined");
+}
+if (typeof svgMapWrapper === 'undefined') {
+    console.error("svgMapWrapper is not defined");
+}
 
 window.onload = function() {
     // Initialize the SVG map
