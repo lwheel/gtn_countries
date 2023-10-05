@@ -289,7 +289,9 @@ window.onload = function() {
         targetElementID: 'svgMapExample',
         data: svgMapDataGPD
     });
-    
+    const countryPaths = document.querySelectorAll("#svgMapExample path");
+console.log('Number of countryPaths:', countryPaths.length);
+
 // Attach event listeners
 document.querySelectorAll("#svgMapExample path").forEach(function(countryPath) {
     console.log('Adding click event listener for: ', countryPath);  // Debug: Log which countryPath is being processed
