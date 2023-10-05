@@ -283,6 +283,14 @@ p {
 </script>
 <script>
     console.log('Script loaded');
+    console.log('Is svgPanZoom available:', typeof svgPanZoom !== 'undefined');
+
+if (typeof svgPanZoom === 'function') {
+  console.log('svgPanZoom is a function');
+} else {
+  console.warn('svgPanZoom is not a function, its type is:', typeof svgPanZoom);
+}
+
 window.onload = function() {
     // Initialize the SVG map
     new svgMap({
