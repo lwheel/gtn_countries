@@ -68,7 +68,7 @@ function svgMapWrapper(svgPanZoom) {
       touchLink: false,
 
       // Set to true to show the to show a zoom reset button
-      showZoomReset: false,
+      //showZoomReset: false,
 
       // Called when a tooltip is created to custimize the tooltip content
       onGetTooltip: function (tooltipDiv, countryID, countryValues) {
@@ -771,7 +771,7 @@ function svgMapWrapper(svgPanZoom) {
     this.mapImage.classList.add('svgMap-map-image');
     this.mapWrapper.appendChild(this.mapImage);
 
-
+/*
     // Add controls
     var mapControlsWrapper = this.createElement(
       'div',
@@ -810,6 +810,7 @@ function svgMapWrapper(svgPanZoom) {
     // Add accessible names to zoom controls
     this.zoomControlIn.setAttribute('aria-label', 'Zoom in');
     this.zoomControlOut.setAttribute('aria-label', 'Zoom out');
+    */
 
     if (this.options.showContinentSelector) {
       // Add continent controls
@@ -1156,10 +1157,10 @@ function svgMapWrapper(svgPanZoom) {
   // Set the disabled statuses for buttons
 
   svgMap.prototype.setControlStatuses = function () {
-    this.zoomControlIn.classList.remove('svgMap-disabled');
-    this.zoomControlIn.setAttribute('aria-disabled', 'false');
-    this.zoomControlOut.classList.remove('svgMap-disabled');
-    this.zoomControlOut.setAttribute('aria-disabled', 'false');
+   // this.zoomControlIn.classList.remove('svgMap-disabled');
+   // this.zoomControlIn.setAttribute('aria-disabled', 'false');
+   // this.zoomControlOut.classList.remove('svgMap-disabled');
+   // this.zoomControlOut.setAttribute('aria-disabled', 'false');
     if (this.options.showZoomReset) {
       this.zoomControlReset.classList.remove('svgMap-disabled');
       this.zoomControlReset.setAttribute('aria-disabled', 'false');
