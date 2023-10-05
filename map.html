@@ -275,20 +275,31 @@ p {
         },
         // Insert your additional settings here
         map: {
-            colors: { water: '#53acff', base: '#eef5ff' },
+            colors: { water: '#ffffff', base: '#eef5ff' },
             width: 900,
             responsive: false
         }
     };
 </script>
 <script>
-    // Initialize the svgMap
-    window.onload = function() {
-        new svgMap({
-            targetElementID: 'svgMapExample',
-            data: svgMapDataGPD
+window.onload = function() {
+    // Initialize the SVG map
+    new svgMap({
+        targetElementID: 'svgMapExample',
+        data: svgMapDataGPD
+    });
+    
+    // Attach event listeners
+    document.querySelectorAll("#svgMapExample path").forEach(function(countryPath) {
+        countryPath.addEventListener("click", function(event) {
+            // Assuming the country code is stored in an attribute "data-id"
+            const countryCode = event.currentTarget.getAttribute("data-id");
+            // Navigate to the new HTML page
+            window.location.href = countryCode + ".html";
         });
-    };
+    });
+};
+
 </script>
 </head>
 <body>
