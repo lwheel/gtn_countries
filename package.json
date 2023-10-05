@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "jsvectormap": "^1.5.3"
+    "jsvectormap": "^1.5.3",
+    "svg-pan-zoom": "^3.6.1"
   }
 }
