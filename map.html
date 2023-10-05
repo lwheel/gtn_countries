@@ -283,13 +283,17 @@ p {
 </script>
 <script>
     console.log('Script loaded');
-    console.log('Is svgPanZoom available:', typeof svgPanZoom !== 'undefined');
-
-if (typeof svgPanZoom === 'function') {
-  console.log('svgPanZoom is a function');
-} else {
-  console.warn('svgPanZoom is not a function, its type is:', typeof svgPanZoom);
+    console.log('About to initialize svgMap');
+try {
+  new svgMap({
+    targetElementID: 'svgMapExample',
+    data: svgMapDataGPD
+  });
+  console.log('svgMap initialized');
+} catch (e) {
+  console.error('Failed to initialize svgMap:', e);
 }
+
 
 window.onload = function() {
     // Initialize the SVG map
