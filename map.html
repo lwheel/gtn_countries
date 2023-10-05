@@ -293,7 +293,7 @@ window.onload = function() {
     document.querySelectorAll("#svgMapExample path").forEach(function(countryPath) {
         countryPath.addEventListener("click", function(event) {
             // Assuming the country code is stored in an attribute "data-id"
-            const countryCode = event.currentTarget.getAttribute("data-id");
+            const countryCode = event.currentTarget.getCountryName("countryID");
             // Navigate to the new HTML page
             window.location.href = countryCode + ".html";
         });
