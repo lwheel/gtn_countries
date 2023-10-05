@@ -61,7 +61,7 @@ function svgMapWrapper(svgPanZoom) {
       hideMissingData: false,
 
       // The default text to be shown when no data is present
-      noDataText: 'No data available',
+      noDataText: ' ',
 
       // Set to true to open the link on mobile devices, set to false (default) to show the tooltip
       touchLink: false,
