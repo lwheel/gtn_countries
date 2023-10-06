@@ -94,7 +94,7 @@ You can pass the following options into svgMap:
 | `flagType` | `'image'`, `'emoji'` | `'image'` | The type of the flag in the tooltip |
 | `flagURL` | `string` | | The URL to the flags when using flag type `'image'`. The placeholder `{0}` will get replaced with the lowercase [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code. Default: `'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags@latest/svg/{0}.svg'` |
 | `hideFlag` | `boolean` | `false` | Hide the flag in tooltips |
-| `noDataText` | `string` | `'No data available'` | The text to be shown when no data is present |
+| `noDataText` | `string` | `' '` | The text to be shown when no data is present |
 | `touchLink` | `boolean` | `false` | Set to `true` to open the link (see `data.values.link`) on mobile devices, by default the tooltip will be shown |
 | `onGetTooltip` | `function` | | Called when a tooltip is created to custimize the tooltip content (`function (tooltipDiv, countryID, countryValues) { return 'Custom HTML'; }`) |
 | `countries` | `object` | | Additional options specific to countries: |
