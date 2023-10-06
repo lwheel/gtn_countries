@@ -1,54 +1,21 @@
 export default {
   data: {
     gdp: {
-      name: 'GDP per capita',
-      format: '{0} USD',
-      thousandSeparator: ','
     },
     change: {
-      name: 'Change to year before',
-      format: '{0} %'
     },
     gdpAdjusted: {
-      name: 'Purchasing Power Parity',
-      format: '{0} USD',
-      thousandSeparator: ',',
-      thresholdMax: 60000,
-      thresholdMin: 1000
     },
     changeAdjusted: {
-      name: 'Change to year before',
-      format: '{0} %'
     }
   },
   applyData: 'gdpAdjusted',
   values: {
     AF: {
-      link: 'https://pt.wikipedia.org/wiki/AF',
-      linkTarget: '_blank',
-      gdp: 587,
-      change: 4.73,
-      linkTarget: '_blank',
-      gdpAdjusted: 1958,
-      changeAdjusted: 0.02
     },
     AL: {
-      link: 'https://pt.wikipedia.org/wiki/AL',
-      linkTarget: '_blank',
-      gdp: 4583,
-      change: 11.09,
-      linkTarget: '_blank',
-      gdpAdjusted: 12507,
-      changeAdjusted: 4.04
     },
     DZ: {
-      link: 'https://pt.wikipedia.org/wiki/DZ',
-      linkTarget: '_blank',
-      gdp: 4293,
-      change: 10.01,
-      linkTarget: '_blank',
-      gdpAdjusted: 15237,
-      changeAdjusted: 0.33
     },
     AO: {
       link: 'https://pt.wikipedia.org/wiki/AO',
