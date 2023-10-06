@@ -132,7 +132,7 @@ function svgMapWrapper(svgPanZoom) {
     this.createMap();
 
     // Apply map data
-    this.applyData(this.options.data);
+   // this.applyData(this.options.data);
   };
 
   // Countries
