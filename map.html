@@ -541,6 +541,7 @@ svgMap.prototype.countries = {
       ? this.options.countryNames[countryID]
       : this.countries[countryID];
   };
+  console.log("check 1");
 // Attach event listeners
 document.querySelectorAll("#svgMapExample path").forEach(function(countryPath) {
     console.log('Adding click event listener for: ', countryPath);  // Debug: Log which countryPath is being processed
