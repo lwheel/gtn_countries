@@ -16,7 +16,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Merriweather&display=swap');
-  body, html {
+  
+  
+  
+        body, html {
 height: 100%;
 margin: 0;
 padding: 0;
@@ -265,27 +268,30 @@ p {
     console.log('Script loaded');
 
 
-    if (document.getElementById('svgMapExample')) {
-  console.log('svgMapExample exists');
-} else {
-  console.log('svgMapExample does not exist');
-}
-
-if (typeof svgPanZoom === 'undefined') {
-    console.error("svgPanZoom is not defined");
-}
-if (typeof svgMapWrapper === 'undefined') {
-    console.error("svgMapWrapper is not defined");
-}
+    
 
 window.onload = function() {
     // Initialize the SVG map
     new svgMap({
-        targetElementID: 'svgMapExample',
-        data: svgMapDataGPD
-    });
-    const countryPaths = document.querySelectorAll("#svgMapExample path");
-console.log('Number of countryPaths:', countryPaths.length);
+  targetElementID: 'svgMap',
+  data: {
+    data: {
+      gdp: {
+        
+      },
+      change: {
+       
+      }
+    },
+    applyData: 'gdp',
+    values: {
+      AF: { },
+      AL: {  },
+      DZ: { }
+      // ...
+    }
+  }
+});
 
 // Attach event listeners
 document.querySelectorAll("#svgMapExample path").forEach(function(countryPath) {
@@ -342,8 +348,7 @@ document.querySelectorAll("#svgMapExample path").forEach(function(countryPath) {
 <div id="main">
     <h2 style="color: black;">Math Olympiad Index</h2>
    
-    <div id="svgMapExample">
-    </div>
+    <div id="svgMap"></div>
 
 </div>
 <br>
